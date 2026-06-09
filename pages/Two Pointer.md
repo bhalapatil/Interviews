@@ -1,0 +1,25 @@
+- What is two pointer pattern and is it used heavily ? #card
+	-
+	- The **Two-Pointer pattern** is an algorithmic technique where two reference pointers (usually array indices) traverse a data structure—most commonly an array or linked list—simultaneously to solve a problem with lower time complexity. [[1](https://medium.com/@johnnyJK/data-structures-and-algorithms-907a63d691c1), [2](https://www.scaler.com/topics/two-pointer-algorithm/), [3](https://www.educative.io/courses/grokking-coding-interview/introduction-to-two-pointers), [4](https://www.rnbglobal.edu.in/uploads/w1wz-unit-ds-part-2.pdf), [5](https://blog.algomaster.io/p/20-dsa-patterns)]
+	- Yes, it is **used heavily** in both technical interviews and real-world software optimizations [1]. It frequently reduces a brute-force \(O(n^2)\) time complexity down to a highly efficient \(O(n)\) linear time complexity [1]. [[1](https://medium.com/@techsuneel99/what-is-two-pointer-and-how-to-solve-it-3e3488e00cd1), [2](https://medium.com/@ogundipe.eniola/the-two-pointer-technique-a-powerful-tool-for-solving-array-and-string-problems-8683ac42b560), [3](https://python.plainenglish.io/mastering-the-two-pointers-technique-in-coding-interviews-19904fa8971b)]
+	- ---
+	- The Three Main Core Variations
+	- The pattern generally manifests in three distinct directional layouts: [[1](https://bytebytego.com/courses/coding-patterns/two-pointers/introduction-to-two-pointers)]
+	- 1. Opposite Ends (Converging)
+		- **How it works:** One pointer starts at the beginning index `0`, and the other starts at the final index `n - 1`. They move inward toward each other based on specific conditions.
+		- **When to use:** Sorted arrays where you need to find pairs, invert elements, or check palindromes.
+		- **Examples:** Two Sum II (sorted array), Valid Palindrome, Reverse an Array. [[1](https://algomaster.io/learn/dsa/two-pointers-introduction), [2](https://medium.com/@johnnyJK/data-structures-and-algorithms-907a63d691c1), [3](https://medium.com/@priyankabhat2468/dsa-pattern-1-two-pointers-simplified-e01febfba1ff), [4](https://sequencedata.tistory.com/63), [5](https://algomaster.io/learn/dsa/two-pointers-introduction)]
+	- 2. Same Direction (Fast & Slow / "Runner")
+		- **How it works:** Both pointers start at the same end, but they move at different speeds. For instance, the fast pointer moves two steps for every one step of the slow pointer.
+		- **When to use:** Detecting cycles in data structures, finding midpoints, or processing linear data relative to a specific gap.
+		- **Examples:** Linked List Cycle Detection (Floyd's Tortoise and Hare), Finding the middle element of a linked list. [[1](https://algomaster.io/learn/dsa/two-pointers-introduction), [2](https://designgurus.substack.com/p/stop-grinding-leetcode-master-these), [3](https://medium.com/@ksaquib/mastering-coding-interview-patterns-fast-and-slow-pointers-java-python-and-javascript-ad84b0233f45), [4](https://medium.com/pythoneers/mastering-the-slow-and-fast-pointer-technique-in-python-84d7c4e3a687), [5](https://algo.monster/liteproblems/234)]
+	- 3. Sliding Window (Dynamic or Fixed)
+		- **How it works:** Two pointers move in the same direction, defining the boundaries of a sub-segment (a "window") of the array. The window expands or shrinks to find a continuous subarray that meets a condition.
+		- **When to use:** Finding contiguous subarrays, minimum subsegments, or substring problems.
+		- **Examples:** Longest Substring Without Repeating Characters, Minimum Size Subarray Sum. [[1](https://tarunjain07.medium.com/two-pointers-notes-4d1400357437), [2](https://javascript.plainenglish.io/common-problem-solving-patterns-using-javascript-df09780326e5), [3](https://medium.com/@meghanathota13/mastering-the-two-pointers-technique-three-essential-approaches-with-code-examples-bc785b09cbc3), [4](https://codeforces.com/topic/115775/en2), [5](https://medium.com/design-bootcamp/mastering-two-pointer-and-sliding-window-in-python-a-trainers-perspective-on-smarter-dsa-learning-6c2d85b40d47)]
+	- ---
+	- Why It Is Used Heavily
+		- **Memory Efficiency:** It operates completely in-place. It utilizes exactly \(O(1)\) auxiliary space because you are only tracking index variables, avoiding expensive allocations. [[1](https://majianglin2003.medium.com/segregating-positive-and-negative-numbers-a-classic-array-interview-question-fb9a75887d5c), [2](https://mindmapai.app/mind-mapping/dsa-problem-solving-pattern-wise), [3](https://medium.com/appkodersolution/mastering-the-two-pointer-technique-solving-the-challenging-problems-144a0fa698b0), [4](https://www.linkedin.com/posts/samiran-roy-2471471ab_what-is-the-time-complexity-of-the-two-pointer-activity-7302926340435943424-nedO)]
+		- **Saves Traversal Time:** Instead of repeatedly scanning the array with nested loops, it eliminates unviable solution paths dynamically, completing jobs in \(O(n)\) time
+		- **Foundation for Complex Code:** It serves as a building block for massive real-world utilities, like partitioning segments in QuickSort, or merging subsets in MergeSort.
+-

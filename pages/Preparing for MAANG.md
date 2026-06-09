@@ -1,0 +1,58 @@
+-
+- To prepare your sons for technical interviews at FAANG (often updated to MAANG to include Meta, Apple, Amazon, Netflix, and Google) [1], you need to focus on two distinct phases: mastering foundational Computer Science concepts and developing problem-solving speed for LeetCode-style questions. [1, 2]
+- Here is a comprehensive roadmap featuring the absolute best books, courses, and execution strategies.
+- ---
+- ## Phase 1: Foundational Books & Courses
+	- Before writing any code, your sons must deeply understand Data Structures and Algorithms (DSA) and how to evaluate code efficiency using Big O notation [1, 2]. [3]
+- ## Top Books
+	- "Cracking the Coding Interview" by Gayle Laakmann McDowell: The definitive industry handbook. It covers the specific core patterns required for FAANG, contains 189 practice questions, and explains the soft skills and behavior interview structures used by Google and Meta. [4, 5, 6]
+	- "Elements of Programming Interviews" (EPI) by Adnan Aziz: Available in Python, Java, and C++. This book is much tougher than "Cracking the Coding Interview" and mirrors the difficulty of actual modern Google and Meta pipeline loops. [7, 8]
+	- "Grokking Algorithms" by Aditya Bhargava: A highly visual, beginner-friendly book. Ideal if your sons are younger or visual learners who need to grasp core concepts (like recursion or graph traversal) before diving into deep math. [9, 10, 11, 12, 13]
+- ## Top Courses
+	- Princeton University’s "Algorithms Part I & II" (Coursera): Completely free, taught by Robert Sedgewick. This is the gold standard for university-level academic rigor in data structures. [14, 15, 16]
+	- "Master the Coding Interview: Data Structures + Algorithms" by Andrei Neagoie (Udemy): Highly practical, concrete walkthroughs optimized specifically for passing job interviews rather than academic grading. [17]
+	- ---
+- ## Phase 2: Mastering LeetCode (The "Pattern" Approach) [18]
+	- Do not let your sons just solve random LeetCode questions. With over 3,000 problems on the platform, random practice is highly inefficient. They must learn the 15 core algorithmic patterns (e.g., Two Pointers, Sliding Window, Sliding Window, Breadth-First Search). [19]
+- ## The Best Curriculum Strategy
+	- 1.  Blind 75 / NeetCode 150: Direct them to NeetCode.io. It is a curated, structured list of the 150 most critical LeetCode questions organized neatly by topic. The creator provides free, step-by-step video explanations for every single problem. [20, 21]
+	- 2.  LeetCode Premium: Once they cover the basics, invest in LeetCode Premium. It allows them to filter questions explicitly by company (e.g., "Google questions asked in the last 6 months"). FAANG companies draw heavily from their own historical question pools.
+	- ---
+- ## Step-by-Step Parent Strategy to Guide Their Practice
+	- To ensure they succeed, establish these specific operational guardrails for their daily study routines:
+		- Implement a Strict Time Box: When solving a LeetCode problem, they should give themselves exactly 30 to 45 minutes. If they cannot solve it by then, they must stop, look at the solution, study the underlying pattern, and retry writing the clean code from scratch 24 hours later.
+		- Force Verbal Communication: FAANG interviewers do not just look for working code; they evaluate how a candidate thinks. Have your sons explain their logic out loud to you or to each other while writing solutions on a dry-erase whiteboard.
+		- Focus on Consistency Over Intensity: Solving 2 problems every single day for 6 months is infinitely more effective than trying to cram 20 problems a day right before an interview.
+		- Simulate High-Stress Environments: Before real loops start, have them use Pramp.com or Interviewing.io for peer-to-peer and anonymous mock interviews under exact real-world time and performance constraints. [22, 23, 24, 25, 26]
+	- To help tailor a concrete study timeline, let me know:
+		- What is your sons' current programming experience level (e.g., complete beginners, CS university students, or working software engineers)?
+		- Which programming language (Python, Java, C++) do they plan to use during their technical interviews?
+		- Roughly how much preparation time do they have before they intend to start applying or interviewing? [27, 28]
+	- [1] [https://www.elevify.com](https://www.elevify.com/en/courses/engineering-construction-and-technology/technology/faang-interview-prep-course-6dcbc)
+	- [2] [https://grokkingtechinterview.com](https://grokkingtechinterview.com/how-to-ace-faang-interview-prep-for-software-engineers-in-2024-5b25614c7aaa)
+	- [3] [https://igotanoffer.com](https://igotanoffer.com/blogs/tech/coding-interview-prep)
+	- [4] [https://www.nucamp.co](https://www.nucamp.co/blog/cracking-the-coding-interview-are-there-any-books-similar-to-cracking-the-coding-interview)
+	- [5] [https://medium.com](https://medium.com/javarevisited/review-is-cracking-the-coding-interview-book-still-relevant-in-2023-24-2a0945848c19)
+	- [6] [https://www.educative.io](https://www.educative.io/blog/best-tips-to-ace-the-coding-interview)
+	- [7] [https://softcircles.com](https://softcircles.com/blog/best-coding-interview-books)
+	- [8] [https://medium.com](https://medium.com/cracking-the-coding-interview-in-ruby-python-and/software-engineering-interview-preparation-book-recommendations-af63da860fb6)
+	- [9] [https://medium.com](https://medium.com/codegym/18-best-java-books-for-beginners-in-2019-4443f28d8232)
+	- [10] [https://medium.com](https://medium.com/wearejaya/18-essential-books-for-any-developer-regardless-of-technology-8fdc98984586)
+	- [11] [https://medium.com](https://medium.com/cracking-the-coding-interview-in-ruby-python-and/software-engineering-interview-preparation-book-recommendations-af63da860fb6)
+	- [12] [https://medium.com](https://medium.com/@YodgorbekKomilo/10-must-read-books-to-master-algorithms-ace-java-coding-interviews-af064089f6b3)
+	- [13] [https://www.codeyoung.com](https://www.codeyoung.com/blog/how-codeyoungs-logic-and-math-modules-prepare-kids-for-competitive-exams)
+	- [14] [https://medium.com](https://medium.com/@ashaynayak50/fastest-way-to-learn-coding-and-actually-get-a-job-04d7b34b5359)
+	- [15] [https://dev.to](https://dev.to/kartikdevsharma/how-to-prepare-for-dsa-i8f)
+	- [16] [https://medium.com](https://medium.com/@YodgorbekKomilo/12-books-that-will-make-you-a-world-class-software-engineer-in-6-months-10b6cbced7cf)
+	- [17] [https://levelup.gitconnected.com](https://levelup.gitconnected.com/10-best-websites-to-practice-java-programming-and-coding-interview-questions-1d2731d8a852)
+	- [18] [https://faceprep.medium.com](https://faceprep.medium.com/faang-interview-preparation-tips-that-helped-me-get-hired-at-google-and-microsoft-071da8901489)
+	- [19] [https://blog.algomaster.io](https://blog.algomaster.io/p/how-to-start-leetcode-in-2025)
+	- [20] [https://www.careervillage.org](https://www.careervillage.org/questions/1115681/how-to-prepare-for-the-technical-interview-for-software-engineer-roles)
+	- [21] [https://codeanddebug.in](https://codeanddebug.in/course/master-dsa-with-leetcode)
+	- [22] [https://www.acedit.ai](https://www.acedit.ai/blog/ai-powered-technical-interview-practice-a-software-engineer%27s-guide-to-faang-interviews-in-2025)
+	- [23] [https://www.webasha.com](https://www.webasha.com/blog/top-questions-for-technical-interviews-in-it)
+	- [24] [https://www.lupahire.com](https://www.lupahire.com/blog/coding-interview-questions)
+	- [25] [https://www.vervecopilot.com](https://www.vervecopilot.com/blog/resources-and-tools-for-faang-interview-prep)
+	- [26] [https://learntocodewith.me](https://learntocodewith.me/posts/technical-interview/)
+	- [27] [https://www.abesit.in](https://www.abesit.in/skills-engineering-students-need-for-high-paying-jobs/)
+	- [28] [https://exampreptool.com](https://exampreptool.com/BlogInfo/how-to-prepare-for-faang-Interviews)

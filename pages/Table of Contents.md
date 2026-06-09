@@ -1,5 +1,18 @@
+## Topic wise
 - [[Interview Process and BKMs]]
 - [[Before the Interview]]
 - [[How to behave during  the interview]]
 - [[How to behave when completing the interview]]
+- [[Runtimes an Big O]]
+- [[Preparing for MAANG]]
 -
+- ## Python programming
+	- [[python - declaring variable and functions]]
+	- [[python - conditionals and looping]]
+	-
+- ## Leet code
+	- [[Leet Code - Two Sum]]
+	-
+- ## Patterns
+	- [[Two Pointer]]
+	-
