@@ -219,4 +219,220 @@
 			- 3.  **Maximum Height**: At any single point in time during execution, the call stack will never hold more than \(n\) active function frames.
 		- Therefore, the maximum memory allocated on the call stack scales linearly with the input size, resulting in a space complexity of **\(O(n)\)**.
 -
--
+- # Exercises
+	- Big O :Q1 : What is the runtime of the below code? Write the code and practise.
+	  collapsed:: true
+	  ```python
+	  def foo(arr: list) :
+	    sum = 0
+	    product = 1
+	    # first way to iterate an array
+	    for i in range(0,len(arr)): 
+	      sum += arr[i]
+	    # second way to iterate an array
+	    for x in arr: 
+	      product *= x
+	    # formatted strings
+	    print(f" Sum is {sum} and product is {product}")
+	  ```
+	  #card
+		- <answer>O(len(arr))
+	- Big O: Q2 : What is the runtime of the below code ? Write the code and practise
+	  collapsed:: true
+	  ```python
+	  def foo(arr: list) :
+	    sum = 0
+	    product = 1
+	    # first way to iterate an array
+	    for i in range(0,len(arr)):
+	     	for j in range(0,len(arr)):
+	    		print(f" i : {arr[i] j: arr[j]}
+	  ```
+	  #card
+		- <Answer>
+	- Big O: Q3 : What is the runtime of the below code ? Write the code and practise
+	  collapsed:: true
+	  ```python
+	  def printUnrderedPairs(arr: list):
+	    for i in range(0,len(arr)):
+	      for j in range(i+1, len(arr)):
+	        print(f"i : {arr[i] j: {arr[j]}})
+	  ```
+		- Show the analysis
+	-
+	- Big O: Q4 What is the runtime of the below code? Write the code and practise
+	  collapsed:: true
+	  ```python
+	  from typing import List
+	  def printUnrderedPairs(arr1: List , arr2:List):
+	    for i in range(0,len(arr1)):
+	      for j in range(i+1, len(arr2)):
+	        print(f"i : {arr1[i] j: {arr2[j]}})
+	  ```
+		- This is O(ab) where a is the length of first array a and b the 2nd array
+	-
+	- Big O: Q5 The following code reverses an array. What is its runtime? 
+	  ```python
+	  def reverse(l : list):
+	    for i in range(0,len(l)/2):
+	      other = len(l) - i -1
+	      temp = l[i]
+	      l[i] = l[other]
+	      l[other] = temp  ANS=O(N/2)
+	  ```
+	  #card
+	- Big O: Q6 Which of the following are equivalent to O(N)? Why ?
+	  collapsed:: true
+	  1. O(N + P) where P < N/2
+	  2. O(2N)
+	  3.O(N + log N)
+	  4.O(N + M)  
+	  #card
+		- ALL OF THEM ARE EQUAL - shreyas
+	- Big O: Q7: Suppose we had an algorithm that took an array of strings, sorted each string and the sorted the full array, What would be the runtime? O(N^2)
+	-
+	- Bog O: Q8: The following code sums the values of all the nodes in a balanced binary tree? What is its time and space complexity ?
+	  collapsed:: true
+	  ```python
+	  def sum(node : Node):
+	    if not node:
+	      return o
+	    return sum(node.left) + node.value + sum(node.right)
+	  ```
+	  #card
+		- O(LOGN) - shreyas
+	- Big O : Q9 The following code checks if a number is prime. What is the time complexity of this? Why is the code checking only till the sqrt? 
+	  collapsed:: true
+	  ```python
+	  bool isPrime(n : int):
+	    for x in 2..range(math.sqrt(n) + 1): #why should 1 be added?
+	      if (n % x == 0):
+	        return false
+	      
+	    return true
+	  ```
+	  #card
+		- O(LOGN) - shreyas
+		-
+	- Big O: Q10 The following code computes the factorial. What is its time and space complexity?
+	  ```python
+	  def factorial(n: int):
+	    if n < 0:
+	      return -1;
+	    elif n == 0:
+	      return 1
+	    else:
+	      return n * factorial(n -1)
+	  ```
+	  #card
+		- O(N)
+	- Big O: Q11 The code calculates the Nth Fibonnacci number. What is the time complexity?  
+	  ```python
+	  def fib( n : int):
+	  	if n <= 0:
+	        return 0
+	      elif (n == 1):
+	        return 1
+	      else:
+	        return fib(n-1) + fib(n-2)
+	      
+	  ```
+	  #card
+		- $O(N^2)$ . It can also be calculated using the earier formula $O(branches ^ depth). Since there are 2 branches and go as deep as N, it will be $O(2^N)$
+		- Generally speaking when you see an algorithm with multiple recursive calls, you are looking at exponential runtime
+	-
+	- Big O Q12 : The following code calculates the fib numbers from 0 to n. What is the time complexity?
+	  ```python
+	  def allfib(n : int):
+	  	for i in range(0,n):
+	        print(f" {i} : {fib(i)}")
+	        
+	  def fib( n : int):
+	  	if n <= 0:
+	        return 0
+	      elif (n == 1):
+	        return 1
+	      else:
+	        return fib(n-1) + fib(n-2)
+	      
+	  ```
+	  #card
+		- Execution is as below
+		  ${2^1} = 2$
+		  $2^2 =4$
+		  $2^3 = 8$...$2^n$
+		- the sum of these is $2^{n+1}$. Hence it is $O(2^n)$
+		-
+	- Big O : Q13 : What is the technique of memoization? Can you write an algorithm for calculating fib series using memoization? #card
+		- Memoization is a technique in which the previously computed values are remembered for using memory and later used as needed
+		- ```python
+		  def get_fibonacci_series(n: int) -> list[int]:
+		      # Edge case: for n = 0, return just [0]
+		      if n == 0:
+		          return [0]
+		          
+		      # Initialize the list with base cases
+		      fib_series = [0] * (n + 1)
+		      fib_series[0] = 0
+		      fib_series[1] = 1
+		      
+		      # Fill the array sequentially (Bottom-Up Memoization)
+		      for i in range(2, n + 1):
+		          fib_series[i] = fib_series[i - 1] + fib_series[i - 2]
+		          
+		      return fib_series
+		  
+		  # Example Usage:
+		  n = 10
+		  result = get_fibonacci_series(n)
+		  print(f"Fibonacci series up to index {n}: {result}")
+		  print(f"The {n}th Fibonacci number is: {result[n]}")
+		  ```
+		- Ignore the below code. Its advanced python feature. Noted here for reference only
+		- ```python
+		  from functools import lru_cache
+		  
+		  # maxsize=None allocates unlimited cache memory
+		  @lru_cache(maxsize=None)
+		  def fib_memo(n: int) -> int:
+		      if n < 2:
+		          return n
+		      return fib_memo(n - 1) + fib_memo(n - 2)
+		  
+		  # Generate series up to index 10
+		  fib_series = [fib_memo(i) for i in range(11)]
+		  print(fib_series)
+		  ```
+	-
+	- Big O : Q14 : The following code computes the product of a and b. What is its runtime? 
+	  ```python
+	  def product(a : int , b: int) -> int :
+	    sum : int = 0
+	    for i in range(0, b):
+	      sum += a
+	    return sum
+	  ```
+	  #card
+		-
+	- Big O: Q15 : The following code computes $a^b$. What is its runtime ?
+	  ```python
+	  def power(a : int , b:int) :
+	    if b < 0:
+	      return 0 #error
+	    elif b == 0:
+	      return 1
+	    else:
+	      return a * power(a, b - 1)
+	  ```
+	  #card
+		-
+	- Big O : Q16: The following code computes a % b. What is its runtime?
+	  ```python
+	  def mod(a : int , b: int):
+	    if b <= 0:
+	      return -1
+	    div : int = a /b
+	    return a - div * b
+	  
+	  ```
+	-

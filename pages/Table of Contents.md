@@ -12,7 +12,8 @@
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]
-	-
+	- [[Leet Code - Add Two numbers]]
+	- [[Leet Code - Longest Substring Without Repeating Characters]]
 - ## Patterns
 	- [[Two Pointer]]
 	-
