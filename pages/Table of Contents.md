@@ -5,6 +5,8 @@
 - [[How to behave when completing the interview]]
 - [[Runtimes an Big O]]
 - [[Preparing for MAANG]]
+- [[Solving Technical questions]]
+- [[Arrays and Strings]]
 -
 - ## Python programming
 	- [[python - declaring variable and functions]]
@@ -14,6 +16,10 @@
 	- [[Leet Code - Two Sum]]
 	- [[Leet Code - Add Two numbers]]
 	- [[Leet Code - Longest Substring Without Repeating Characters]]
+	- [[Leet Code - check if a number is a palindrome]]
+	- [[Leet code -Longest Common Prefix]]
+	- [[Leet code - Group Anagrams]]
+	-
 - ## Patterns
 	- [[Two Pointer]]
 	-

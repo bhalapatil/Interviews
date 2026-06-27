@@ -338,7 +338,7 @@
 	      
 	  ```
 	  #card
-		- $O(N^2)$ . It can also be calculated using the earier formula $O(branches ^ depth). Since there are 2 branches and go as deep as N, it will be $O(2^N)$
+		- $O(N^2)$ . It can also be calculated using the earier formula $O(branches ^ {depth})$. Since there are 2 branches and go as deep as N, it will be $O(2^N)$
 		- Generally speaking when you see an algorithm with multiple recursive calls, you are looking at exponential runtime
 	-
 	- Big O Q12 : The following code calculates the fib numbers from 0 to n. What is the time complexity?
@@ -413,7 +413,7 @@
 	    return sum
 	  ```
 	  #card
-		-
+		- O(b)
 	- Big O: Q15 : The following code computes $a^b$. What is its runtime ?
 	  ```python
 	  def power(a : int , b:int) :
@@ -425,7 +425,7 @@
 	      return a * power(a, b - 1)
 	  ```
 	  #card
-		-
+		- O(b) --check
 	- Big O : Q16: The following code computes a % b. What is its runtime?
 	  ```python
 	  def mod(a : int , b: int):
@@ -435,4 +435,77 @@
 	    return a - div * b
 	  
 	  ```
+	- Big O: Q17 The following code performs Integer division. What is its runtime? 
+	  ```python
+	  def div(a : int , b:int):
+	    count = 0 
+	    sum = b
+	    while sum <= a:
+	      sum += b
+	      count = count + 1
+	    return count
+	  ```
+	  #card
+		- O(a/b)
+	- Big O Q 18: The following code computes the integer square root of a number. If the number is not a perfect square (there is no integer ), then it returns -1. It does this by successive guessing. If n is 100, it first guesses 50. Too high ? Try something lower - halfway between 1 and 50. What is its runtime ?
+	  ```python
+	  def sqrt(n : int):
+	    return sqrt_helper(n , 1 , n)
+	  
+	  def sqrt_helper(n : int , min : int , max:int):
+	    if (max < min):
+	      return -1
+	    guess : int = (min + max) / 2
+	    if (guess * guess == n):
+	      return guess
+	    elif (guess * guess < n):
+	      return sqrt_helper(n , guess + 1 , max) # try higher
+	    else:
+	      return sqrt_helper(n , min , guess -1)
+	    
+	   
+	  ```
+	  #card
+		- O(log(n)). The algorithm is doing a binary search of the square root and hence lo
 	-
+	- BIG o : q 19 : Code to find out the sqrt. What is the runtime
+	  ```python
+	  int sqrt(n: int):
+	    guess = 1
+	    for i in range(1, n):
+	      if guess * guess == n:
+	        return guess
+	      elif guess * guess > n:
+	        break
+	    return -1
+	  ```
+	  #card
+		- O(sqrt(n)) : Since the loop terminates at a value greater than the sqrt of n
+	- Big O : Q 20: If a binary search tree is not balanced, how long might it take (worst case) to find an element in it? #card
+		- O(n) : The tree could be a straight tree and the element might be at the botton
+	- Big O : Q 21: You are looking for a specific value in a binary tree, but the tree is not a binary search tree. What is the time complexity of this? #card
+		- O(n)
+	- Big O : Q 22 : The following code sums the digits in a number. What is its runtime?
+	  ```python
+	  def sumDigits(n : int):
+	    sum = 0 
+	    while(n > 0):
+	      sum += n % 10;
+	      n = n / 10 # integer division
+	    return sum
+	  ```
+	  #card
+		- O(log n). A number of d digits can have $10^d$ in value. So if $10^d = n$ then d = $\log_{10}n$
+	- Big O Q 23: The following code computes the intersection (the number of elements in common) of two arrays. It assumes neither array has duplicates. It computes the intersection by sorting one array (array b) and then iterating through array a checking (via binary search) if each value is in b. What is its runtime ?
+	  ```python
+	  def intersection(a : List[int] , b:List[int]):
+	    mergesort(b)
+	    intersect: int = 0
+	    for i in range(0,len(a)):
+	      if binary_search(b , a[i]):
+	        intersect += 1
+	    return intersect
+	  ```
+	  #card
+		- O( b log b + a log b). First, we have to sort array b which takes O(b log b) time. Then for each element in a, we do binary search in O(log b) time. The second part takes O(a log b) time
+		-

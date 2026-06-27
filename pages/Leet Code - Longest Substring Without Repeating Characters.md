@@ -26,10 +26,10 @@
 	- Every time a new character is encountered, it is added to the seen and the window is incremented.
 	- When a character that is encountered is got, the start is moved to the character next to the duplicate character.
 	- #+BEGIN_IMPORTANT
-	  Ensure that the window boundaries are checked.
+	  Ensure that the window boundaries are checked. 
 	  #+END_IMPORTANT
 	- ```python
-	  class Solution1:
+	  class Solution:
 	      def lengthOfLongestSubstring(self, s: str) -> int:
 	          seen = {}
 	          start = 0

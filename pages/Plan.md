@@ -1,0 +1,21 @@
+### Sourabh
+	- TODO Review python notes for list
+	- TODO Review python notes for dict
+	- TODO Review python notes for set
+	- TODO Review python notes for tuples
+	- TODO Review python notes for other data structures
+	- TODO Understand writing unit tests
+	-
+- ### Shreyas
+	-
+	- TODO Shreyas : Review python notes for list
+	  SCHEDULED: <2026-06-25 Thu>
+	- TODO Review python notes for dict
+	- TODO Review python notes for set
+	- TODO Review python notes for tuples
+	- TODO Review python notes for other data structures
+	- TODO Understand writing unit tests
+-
+- ### My Tasks
+	- TODO Add the code for the ((6a3ab47b-e5a8-46da-8e64-3c5d8924e194))
+	-
