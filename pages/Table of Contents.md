@@ -7,6 +7,7 @@
 - [[Preparing for MAANG]]
 - [[Solving Technical questions]]
 - [[Arrays and Strings]]
+- [[Linked Lists]]
 -
 - ## Python programming
 	- [[python - declaring variable and functions]]

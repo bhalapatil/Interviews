@@ -72,7 +72,7 @@
 		      # Step2 : Create method that start with test
 		      def test_input1(self):
 		          result = isPermutation("god", "dog")
-		          self.assertEqual(result, True)
+		          self.assertTrue(result)
 		  
 		      def test_input2(self):
 		          result = isPermutation("god ", "dog")
@@ -91,4 +91,157 @@
 	- Palindrome permutation: Given a string, write a function to check if it is a permutation of a palindrome.
 	  id:: 6a3ab47b-e5a8-46da-8e64-3c5d8924e194
 		- What is a palindrome? What are the possible cases (even , odd) and what is are the features
+		- Solution 1: check the input string and ensure that there is no more than on character with an odd count
+		- ```python
+		  import unittest
+		  from typing import Dict
+		  
+		  
+		  def get_char_count(input: str) -> Dict[str, int]:
+		      freq = dict()
+		      for x in input:
+		          s = x.upper()
+		          if s in freq:
+		              freq[s] = freq[s] + 1
+		          else:
+		              freq[s] = 1
+		      return freq
+		  
+		  
+		  def is_palindrome(input: str) -> bool:
+		      freq = get_char_count(input)
+		      odd_found = False
+		      for (k, v) in freq.items():
+		          if (v % 2) == 1:
+		              if odd_found:
+		                  return False
+		              odd_found = True
+		          else:
+		              return True
+		  
+		  
+		  class check_palin_permutation(unittest.TestCase):
+		  
+		      def test_input1(self):
+		          self.assertTrue(is_palindrome("Tact Coa"))
+		  
+		      def test_input2(self):
+		          self.assertFalse(is_palindrome("cat"))
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  ```
+		- Why is it sufficient to check this condition alone?
+		- What would be the logic if you assumed english alphabets and if you want to implement this using a bit vector
 		-
+	- Single Edit: There are 3 types of edits that can be performed on strings: insert a character, remove a char or replace a char. Given two strings, write a function to check if they are one edit (or zero edits) away
+		- Ex:
+		  pale , ple -> true
+		  pales , pale -> true
+		  pale , bale -> true
+		  pale , bake -> false
+		- ```python
+		  import unittest
+		  
+		  
+		  def is_single_edit(s1: str, s2: str) -> bool:
+		      result = True
+		      idx1 = 0
+		      idx2 = 0
+		      # remove any spaces
+		      s1 = s1.strip()
+		      s2 = s2.strip()
+		      edit_type = None
+		  
+		      # check for any empty strings
+		      #
+		      if len(s1) <= 0 or len(s2) <= 0:
+		          return False
+		      while True:
+		          # either of the string is complete and so far there is only one edit and hence return true
+		          if ((idx1 + 1 == len(s1)) or (idx2 + 1 == len(s2))):
+		              if edit_type:
+		                  return True
+		              else:
+		                  if abs(len(s1) - len(s2)) == 1:
+		                      return True
+		                  else:
+		                      return False
+		  
+		          # both the chars are matching. Increment both of the them
+		          if s1[idx1] == s2[idx2]:
+		              idx1 += 1
+		              idx2 += 1
+		          # string1 next char is the same the string2 curr char. Thne
+		          # deleting the curr char in string1 can be done if this is the first edit
+		          # Else it is fail case
+		          elif s1[idx1 + 1] == s2[idx2]:
+		              if edit_type:
+		                  return False
+		              else:
+		                  edit_type = "delete"
+		                  idx1 = idx1 + 1
+		          elif s1[idx1] == s2[idx2 + 1]:
+		              if edit_type:
+		                  return False
+		              else:
+		                  edit_type = "insert"
+		                  idx2 = idx2 + 1
+		          elif (s1[idx1] != s2[idx2]) and (s1[idx1 + 1] == s2[idx2 + 1]):
+		              if edit_type:
+		                  return False
+		              else:
+		                  edit_type = "modify"
+		                  idx1 += 1
+		                  idx2 += 1
+		  
+		      return True
+		  
+		  
+		  
+		  class check_single_edits(unittest.TestCase):
+		      def test_input1(self):
+		          result = is_single_edit("test", "tst")
+		          self.assertTrue(result)
+		  
+		      def test_input2(self):
+		          result = is_single_edit("tst", "test")
+		          self.assertTrue(result)
+		  
+		      def test_input3(self):
+		          result = is_single_edit("tart", "mart")
+		          self.assertTrue(result)
+		  
+		      def test_input5(self):
+		          result = is_single_edit("tart", "mast")
+		          self.assertFalse(result)
+		  
+		      def test_input6(self):
+		          result = is_single_edit("x", "mast")
+		          self.assertFalse(result)
+		  
+		      def test_input7(self):
+		          result = is_single_edit("tste", "tst")
+		          self.assertTrue(result)
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  ```
+	- String compression: Implement a method to perform basic string compression using counts of repeated chars. For ex: the string aabcccccaaa would be a2b1c5a3. If the compressed string would not  become smaller than the original string, you method should return the orginal string. You can assume the string has only uppercase and lowercase letters (a -z)
+	  #card
+		- Hint: Underlying concept is the same - character frequency
+	- String Rotation: Assume that you have a method isSubstring that check if one string is a substring of the other. Write a function that takes two string and checks if one is a rotation of the other? #card
+		- See the hints in the book and solve
+	- Rotate Matrix: Given an image represented by NxN matrix, where each pixel is in the image is 4 bytes. Write a method to rotate the image by 90 degrees. Can you do this in place?
+		- Watch the striver's video : {{video https://www.youtube.com/watch?v=Z0R2u6gd3GU&t=466s}}
+		- See book, page 151 for the solution.
+		- The task is to convert into python and write the unit test cases
+	- Zero matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+		- Watch stiver's video
+		- {{video https://www.youtube.com/watch?v=N0MgLvceX7M}}
+		-
+	-
+	-
