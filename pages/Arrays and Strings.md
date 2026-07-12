@@ -162,7 +162,7 @@
 		          # either of the string is complete and so far there is only one edit and hence return true
 		          if ((idx1 + 1 == len(s1)) or (idx2 + 1 == len(s2))):
 		              if edit_type:
-		                  return True
+		                  return T/rue
 		              else:
 		                  if abs(len(s1) - len(s2)) == 1:
 		                      return True

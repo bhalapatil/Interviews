@@ -124,4 +124,80 @@
 	  Input 3 -> 5 -> 8 ->5 ->10 ->2 (partition = 5)
 	  Output 3 ->1 -> 2 -> 10 -> 5 -> 5 ->8
 	  #card
-	-
+	- Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop
+	  Defn : Circular linked list : A (corrupt) linked list in which a node's next pointer points to an earlier node, so as to make a loop in the linked list
+	  Input : A -> B -< C -> D -> E -> C ( the same C as earlier)
+	  Outut - C
+		- Traverse the linked list and store the elements already encountered in a hash table.
+		- ```python
+		  import unittest
+		  
+		  
+		  class Node:
+		      def __init__(self, value):
+		          self.value = value
+		          self.next = None
+		  
+		  
+		  class LinkedList:
+		      def __init__(self):
+		          self.head: Node = None  # set the default value
+		          self.count: int = 0
+		  
+		      def addElement(self, value):
+		          curr: Node = self.head
+		  
+		          if not curr:
+		              self.head = Node(value)
+		  
+		          else:
+		              while curr.next:
+		                  curr = curr.next
+		              curr.next = Node(value)
+		  
+		          self.count += 1
+		  
+		      def print(self) -> str:
+		          print("called print")
+		          s = ""
+		          curr = self.head
+		          i: int = 0
+		          while curr:
+		              i += 1
+		              s = s + str(curr.value) + ':'
+		              print(f" {i} : {curr.value}")
+		              curr = curr.next
+		          return s
+		  
+		      def get_count(self) -> int:
+		          return self.count
+		  
+		  
+		  def detect_loop(ll: LinkedList) -> int | None:
+		      d = {}
+		      curr = ll.head
+		      while (curr):
+		          if curr.value in d:
+		              return curr.value
+		          else:
+		              d[curr.value] = 1
+		              curr = curr.next
+		      return None
+		  
+		  
+		  class check_loops(unittest.TestCase):
+		      def test_input1(self):
+		          ll = LinkedList()
+		          ll.addElement(10)
+		          ll.addElement(3)
+		          ll.addElement(6)
+		          ll.addElement(4)
+		          ll.addElement(3)
+		          result = detect_loop(ll)
+		          self.assertEqual(result, 3)
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  ```

@@ -8,6 +8,7 @@
 - [[Solving Technical questions]]
 - [[Arrays and Strings]]
 - [[Linked Lists]]
+- [[Stacks and Queues]]
 -
 - ## Python programming
 	- [[python - declaring variable and functions]]
