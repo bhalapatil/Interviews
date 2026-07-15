@@ -9,6 +9,7 @@
 - [[Arrays and Strings]]
 - [[Linked Lists]]
 - [[Stacks and Queues]]
+- [[Trees and Graphs]]
 -
 - ## Python programming
 	- [[python - declaring variable and functions]]
