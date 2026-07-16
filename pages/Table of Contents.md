@@ -9,11 +9,13 @@
 - [[Arrays and Strings]]
 - [[Linked Lists]]
 - [[Stacks and Queues]]
-- [[Trees and Graphs]]
+- [[What to focus on trees]]
+- [[Trees]]
 -
 - ## Python programming
 	- [[python - declaring variable and functions]]
 	- [[python - conditionals and looping]]
+	- [[python - standard Library collections]]
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]
@@ -22,6 +24,7 @@
 	- [[Leet Code - check if a number is a palindrome]]
 	- [[Leet code -Longest Common Prefix]]
 	- [[Leet code - Group Anagrams]]
+	- [[Leetcode Questions To solve]]
 	-
 - ## Patterns
 	- [[Two Pointer]]

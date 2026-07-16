@@ -1,6 +1,8 @@
-- #+BEGIN_IMPORTANT
-  Being able to implement trees and graphs from basics is essential
-  #+END_IMPORTANT
+title:: Trees
+#+BEGIN_IMPORTANT
+Being able to implement trees and graphs from basics is essential
+#+END_IMPORTANT
+
 - # Types of Trees
 	- A tree can be understood recursively
 		- Each tree has a root node
@@ -209,4 +211,162 @@
 		- #+BEGIN_IMPORTANT
 		  Many problems involving list of valid words leverage a trie as an optimization. In situations where we search through the tree on related prefixes repeately (e.g looking up M, then MA, htne MAN, then MANY) we migh pass around a reference to the current node in the tree. This will allow us to just check if Y is a child of MAN, rather than starting from root each time
 		  #+END_IMPORTANT
+- # Exercises
+	- **MInimal Tree** : Given a sorted (increasing order) array with unique integer elements, write an algo to create a binary search tree with minimal height #card
+		- hints
+		- A minimal binary tree will have about the same number of nodes on the left and right od each node. Let's focus on the root and how would you ensure that the same number of nodes are on the left and right of the root
+		- Can this problem be solved by recursion? Try to break this problem into subproblems
+		- ```python
+		  import unittest
+		  from typing import List
+		  
+		  # since the array is sorted, we can utilize this fact to create a tree.
+		  # The smallest tree will be from 3 nodes with the middle node
+		  # being the root and the first node being the left and the node
+		  # after middle being the right
+		  
+		  
+		  class TreeNode:
+		      def __init__(self, value: int):
+		          self.value = value
+		          self.left = None
+		          self.right = None
+		  
+		  
+		  def create_minimal_bst(arr: List[int], start: int | None, end: int | None) -> TreeNode:
+		      # print(f"start:{start} end:{end}")
+		      if end < start:
+		          return None
+		  
+		      mid = (start + end)//2
+		      print(f"creating the node for {mid}")
+		      node = TreeNode(arr[mid])
+		      node.left = create_minimal_bst(arr, start, mid - 1)
+		      node.right = create_minimal_bst(arr, mid+1, end)
+		      return node
+		  
+		  
+		  class check_minimal_bst(unittest.TestCase):
+		  
+		      def test_input1(self):
+		          arr = [1, 2, 3]
+		          n = create_minimal_bst(arr, 0, len(arr) - 1)
+		          self.assertEqual(n.value, 2)
+		          self.assertEqual(n.left.value, 1)
+		          self.assertEqual(n.right.value, 3)
+		  
+		      def test_zero_elements(self):
+		          arr = []
+		          n = create_minimal_bst(arr, 0, len(arr) - 1)
+		          self.assertIsNone(n)
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  ```
+		- TODO Leetcode 108 is the same question: Using the solution solve it on Leetcode and submit it. You can search it using 108 in the search 
+		  https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
+		- ```python
+		  # Definition for a binary tree node.
+		  # class TreeNode:
+		  #     def __init__(self, val=0, left=None, right=None):
+		  #         self.val = val
+		  #         self.left = left
+		  #         self.right = right
+		  class Solution:
+		      def create_minimal_bst(self, arr: List[int], start , end):
+		      # print(f"start:{start} end:{end}")
+		          if end < start:
+		              return None
+		  
+		          mid = (start + end)//2
+		          print(f"creating the node for {mid}")
+		          node = TreeNode(arr[mid])
+		          node.left = self.create_minimal_bst(arr, start, mid - 1)
+		          node.right = self.create_minimal_bst(arr, mid+1, end)
+		          return node
+		  
+		      def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+		          result = self.create_minimal_bst(nums, 0 , len(nums) -1)
+		          return result
+		          
+		  ```
+		- TODO Solve Leetcode 109: Same question but using linkedlist https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/
 		-
+	- **List of Depths**: Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth(e.g if you have a tree with depth D, you'll have D linked lists)
+		- What are the different ways of traversing a tree? Isn't tree a graph ?
+		- ```python
+		  import unittest
+		  from typing import List, Optional
+		  
+		  
+		  # **List of Depths**: Given a binary tree, design an algorithm which creates
+		  # a linked list of all the nodes at each depth
+		  # (e.g if you have a tree with depth D, you'll have D linked lists)
+		  
+		  # In this case instead of SLL we will create an python list.
+		  # It can be easily extended to LinkedList.
+		  # hints 107: Try modifying a graph search algo to track the depth of the tree
+		  # hint 123: a hast table or an array that maps from level number to the nodes
+		  # at that level might be useful
+		  # hint 135: You could come up with an algorithm that combines BFS and DFS
+		  
+		  # Definition for a binary tree node.
+		  class TreeNode:
+		      def __init__(self, val=0, left=None, right=None):
+		          self.val = val
+		          self.left = left
+		          self.right = right
+		  
+		  
+		  class Solution:
+		      def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+		          result_list = []
+		          queue: List[TreeNode] = []  # A queue needed for BFS
+		          level = 0  # track the level of the node being traversed
+		          queue.append((root, 0))  # add the first element to the queue
+		          while (len(queue) > 0):  # process until there are elements
+		              curr_node, level = queue.pop(0)
+		              try:
+		                  level_list = result_list[level]
+		                  level_list.append(curr_node.val)
+		              except IndexError:
+		                  result_list.insert(level, [curr_node.val])
+		              if curr_node.left:
+		                  queue.append((curr_node.left, level + 1))
+		              if curr_node.right:
+		                  queue.append((curr_node.right, level + 1))
+		          return result_list
+		  
+		  
+		  class check_list_of_depths(unittest.TestCase):
+		      def test_input1(self):
+		          t1 = TreeNode(1)
+		          t1.left = TreeNode(2)
+		          t1.right = TreeNode(3)
+		          result = Solution().levelOrder(t1)
+		          print(result)
+		          self.assertEqual(result, [[1], [2, 3]])
+		  
+		      def test_input2(self):
+		          t1 = TreeNode(1)
+		          t1.left = TreeNode(2)
+		          t1.right = TreeNode(3)
+		  
+		          t2 = t1.right
+		          t2.right = TreeNode(6)
+		          result = Solution().levelOrder(t1)
+		          print(result)
+		          self.assertEqual(result, [[1], [2, 3], [6]])
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  
+		  
+		  
+		  
+		  
+		  ```
