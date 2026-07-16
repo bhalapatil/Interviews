@@ -124,6 +124,147 @@
 	  Input 3 -> 5 -> 8 ->5 ->10 ->2 (partition = 5)
 	  Output 3 ->1 -> 2 -> 10 -> 5 -> 5 ->8
 	  #card
+		- ```python
+		  import unittest
+		  
+		  
+		  class Node:
+		      def __init__(self, value):
+		          self.value = value
+		          self.next = None
+		  
+		  
+		  class LinkedList:
+		      def __init__(self):
+		          self.head: Node = None  # set the default value
+		          self.count: int = 0
+		  
+		      def addElement(self, value):
+		          curr: Node = self.head
+		  
+		          if not curr:
+		              self.head = Node(value)
+		  
+		          else:
+		              while curr.next:
+		                  curr = curr.next
+		              curr.next = Node(value)
+		  
+		          self.count += 1
+		  
+		      def print(self) -> str:
+		          print("called print")
+		          s = ""
+		          curr = self.head
+		          i: int = 0
+		          while curr:
+		              i += 1
+		              s = s + str(curr.value) + ':'
+		              print(f" {i} : {curr.value}")
+		              curr = curr.next
+		          return s
+		  
+		      def get_count(self) -> int:
+		          return self.count
+		  
+		  
+		  def partition(ll: LinkedList, search: int):
+		      # get the pivot element first
+		      curr = ll.head
+		      prev = None
+		  
+		      pivot = None
+		      prev_to_pivot = None
+		  
+		      if not curr:
+		          print("No elements found")
+		          # TODO add the code to create an exception .
+		          # Practise exception handling
+		  
+		  # finding the pivot element by getting the first
+		  # element equal or greater than the  search
+		      while (curr):
+		  
+		          if curr.value < search:
+		              prev = curr
+		              curr = curr.next  # move the next element
+		              continue
+		          else:
+		              pivot = curr
+		              prev_to_pivot = prev
+		              break
+		  
+		      prev_msg = prev_to_pivot.value if prev_to_pivot else "Not set"
+		      print(f"pivot {pivot.value} prev_to_pivot : {prev_msg}")
+		  
+		      # continue checking the elements from the pivot
+		      # for moving them before the pivot
+		  
+		      curr = pivot.next
+		      prev = pivot
+		  
+		      while (curr):
+		  
+		          if curr.value < pivot.value:
+		              print(f"curr.value {curr.value} ")
+		              prev.next = curr.next  # current free
+		              if prev_to_pivot:
+		                  prev_to_pivot.next = curr
+		              else:
+		                  prev_to_pivot = curr
+		                  ll.head = curr
+		  
+		              curr.next = pivot
+		              curr = prev.next
+		          else:
+		              curr = curr.next
+		  
+		  
+		  class Test_Partition(unittest.TestCase):
+		  
+		  #    def test_pivot1(self):
+		  #        ll = LinkedList()
+		  #        ll.addElement(10)
+		  #        ll.addElement(6)
+		  #        ll.addElement(4)
+		  #        print("Before partition")
+		  #        ll.print()
+		  #        partition(ll, 8)
+		  #        print("After partition")
+		  #        result = ll.print()
+		  #        self.assertEqual(result, "6:4:10:")
+		  
+		      def test_pivot2(self):
+		          ll = LinkedList()
+		          ll.addElement(10)
+		          ll.addElement(6)
+		          ll.addElement(4)
+		          ll.addElement(3)
+		          print("Before partition")
+		          ll.print()
+		          partition(ll, 4)
+		          print("After partition")
+		          result = ll.print()
+		          self.assertEqual(result, "4:6:10:")
+		  
+		  #    def test_pivot3(self):
+		  #        ll = LinkedList()
+		  #        ll.addElement(10)
+		  #        ll.addElement(6)
+		  #        ll.addElement(4)
+		  #        print("Before partition")
+		  #        ll.print()
+		  #        partition(ll, 8)
+		  #        print("After partition")
+		  #        result = ll.print()
+		  #        self.assertEqual(result, "6:4:10:")
+		  
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  ```
 	- Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop
 	  Defn : Circular linked list : A (corrupt) linked list in which a node's next pointer points to an earlier node, so as to make a loop in the linked list
 	  Input : A -> B -< C -> D -> E -> C ( the same C as earlier)
