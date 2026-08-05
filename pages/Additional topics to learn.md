@@ -1,0 +1,5 @@
+- Topological sort
+- Dijkstra's algorithm
+- AVL Trees
+- Reb-Black trees
+-

@@ -1,0 +1,20 @@
+-
+- To pass the **[HackerRank Python (Basic) Skills Certification](https://www.hackerrank.com/skills-verification/python_basic)**, you must solve 2 coding questions in 90 minutes. The exam specifically tests two core areas: **String/Collection Manipulation** and **Basic Object-Oriented Programming (OOP)**. [[1](https://www.hackerrank.com/skills-verification/python_basic), [2](https://www.hackerrank.com/skills-directory/python_basic)]
+- You should practice these exact high-yield problems on the [HackerRank Python Domain Track](https://www.hackerrank.com/domains/python) to prepare. [[1](https://www.hackerrank.com/domains/python)]
+- 1. String Manipulation & Logic (Targeting Question 1)
+- The first test question almost always involves taking a sentence, splitting it, rearranging it, and modifying character cases. [[1](https://www.youtube.com/watch?v=miUFnG5qn2Q)]
+	- **sWAP cASE:** Practice converting lowercase letters to uppercase and vice versa.
+	- **String Split and Join:** Practice breaking a string into a list of words using `.split()`, modifying them, and gluing them back together with `" ".join()`.
+	- **What's Your Name?:** Practice basic string formatting using f-strings or `.format()`.
+	- **Mutations:** Master how to alter characters inside a string (remembering that Python strings are immutable, so you must use list casting or slicing). [, [2](https://www.scribd.com/document/471076679/HackerRank-Python-Practice-topics), [3](https://www.hackerrank.com/skills-directory/python_basic), [4](https://www.instagram.com/p/DVv02kIk3qe/), [5](https://pynative.com/python-string-exercise/)]
+- 2. Built-in Collections & Loops (Targeting Data Parsing)
+- You need to know how to filter arrays, manage unique items, and handle key-value pairs cleanly. [[1](https://www.hackerrank.com/skills-directory/python_basic)]
+	- **Find the Runner-Up Score!:** Learn to find the second-highest number in an array by filtering out duplicates using `set()`.
+	- **Nested Lists:** Practice sorting a list of student names and grades to extract specific values.
+	- **List Comprehensions:** Practice writing fast, compact `for` loops inside lists.
+	- **The `map()` and `lambda` functions:** Ensure you know how to instantly cast a list of string inputs into integers using `list(map(int, input().split()))`. [[1](https://www.hackerrank.com/domains/python), [2](https://www.hackerrank.com/skills-directory/python_basic), [3](https://medium.com/@prgajmal/hackerrank-python-basic-certification-test-question-and-answers-e56f29bd4c5a), [4](https://www.youtube.com/watch?v=pK33byf52zo), [5](https://www.scribd.com/document/965383440/Module-8-1-Merged)]
+- 3. Basic Object-Oriented Programming (Targeting Question 2)
+- The second certification question frequently requires building simple geometric or utility classes with specific constructor structures and methods. [, [2](https://medium.com/@prgajmal/hackerrank-python-basic-certification-test-question-and-answers-e56f29bd4c5a)]
+	- **Class Construction:** Practice initializing instances using `def __init__(self, ...)` and assigning properties.
+	- **Method Implementation:** Practice adding standard computing methods (like calculating an area or a perimeter) that return values based on instance attributes. [, [2](https://www.hackerrank.com/skills-directory/python_basic), [3](https://medium.com/@prgajmal/hackerrank-python-basic-certification-test-question-and-answers-e56f29bd4c5a), [4](https://www.scribd.com/document/514190727/PY-QB)]
+-

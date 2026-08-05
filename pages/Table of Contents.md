@@ -11,8 +11,13 @@
 - [[Stacks and Queues]]
 - [[What to focus on trees]]
 - [[Trees]]
+- [[Graphs]]
+- [[Additional topics to learn]]
 -
 - ## Python programming
+	- [[python - input function]]
+	- [[python - output function]]
+	- [[python - variables]]
 	- [[python - declaring variable and functions]]
 	- [[python - conditionals and looping]]
 	- [[python - standard Library collections]]
@@ -25,6 +30,8 @@
 	- [[Leet code -Longest Common Prefix]]
 	- [[Leet code - Group Anagrams]]
 	- [[Leetcode Questions To solve]]
+- # Hacker Rank
+	- [[Topis for Python Basics]]
 	-
 - ## Patterns
 	- [[Two Pointer]]

@@ -370,3 +370,255 @@ Being able to implement trees and graphs from basics is essential
 		  
 		  
 		  ```
+- **Check Balanced** Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one #card
+	- Leetcode question 110: https://leetcode.com/problems/balanced-binary-tree/description/
+	- ```python
+	  import unittest
+	  from typing import Optional
+	  
+	  # Definition for a binary tree node.
+	  
+	  
+	  class TreeNode:
+	      def __init__(self, val=0, left=None, right=None):
+	          self.val = val
+	          self.left = left
+	          self.right = right
+	  
+	  
+	  class Solution:
+	      def isBalanced(self, root: Optional[TreeNode]) -> bool:
+	          if not root:  # root is none
+	              return True
+	          else:
+	              result = self.traverse_tree(root)
+	              if result == -2:
+	                  return False
+	              return True
+	  
+	      def traverse_tree(self, root: Optional[TreeNode]) -> int:
+	          if not root:
+	              return -1
+	          else:
+	  
+	              left_height = self.traverse_tree(root.left)
+	              right_height = self.traverse_tree(root.right)
+	              if left_height == -2 or right_height == -2:
+	                  return -2
+	  
+	              # Question: Why is the below code needed
+	              print(f"value:{root.val} left_height:{left_height} right_height:{right_height} diff: {abs(left_height - right_height)}")
+	              if abs(left_height - right_height) > 1:
+	                  print("Tree imbalanced: {root.val}")
+	                  return -2  # Tree is not balanced
+	              else:
+	                  return max(left_height, right_height) + 1
+	  
+	  
+	  class check_balanced(unittest.TestCase):
+	  
+	      # def test_input1(self):
+	      #     root = TreeNode(0)
+	      #     root.left = TreeNode(1)
+	      #     root.right = TreeNode(2)
+	      #     result = Solution().isBalanced(root)
+	      #     self.assertTrue(result)
+	  
+	      # def test_input2(self):
+	      #     root = TreeNode(0)
+	      #     root.left = TreeNode(1)
+	      #     root.left.left = TreeNode(2)
+	      #     result = Solution().isBalanced(root)
+	      #     self.assertFalse(result)
+	  
+	      # # Test case added as per Leetcode
+	      # def test_input3(self):
+	      #     root = None
+	      #     result = Solution().isBalanced(root)
+	      #     self.assertTrue(result)
+	  
+	      def test_input4(self):
+	          root = TreeNode(1)
+	          two1 = TreeNode(2)
+	          root.left = two1
+	          three1 = TreeNode(3)
+	          two1.left = three1
+	          four1 = TreeNode(4)
+	          three1.left = four1
+	  
+	          two2 = TreeNode(2)
+	          root.right = two2
+	          three2 = TreeNode(3)
+	          two2.right = three2
+	          four2 = TreeNode(4)
+	          three2.right = four2
+	  
+	          result = Solution().isBalanced(root)
+	  
+	          self.assertFalse(result)
+	  
+	  if __name__ == "__main__":
+	      unittest.main()
+	  
+	  ```
+- **Validate BST** : Implement a function to check if  a binary tree is binary search tree? #card
+	- What conditions need to satisfied to say a tree is balanced?
+	- leetcode 98: https://leetcode.com/problems/validate-binary-search-tree/description/
+	-
+	- 1. Left Subtree Condition
+		- All node values in the **left subtree** must be strictly **less than** the parent node's value. [[1](https://levelup.gitconnected.com/mastering-binary-search-tree-bst-e860c1e3ac39), [2](https://unstop.com/blog/difference-between-binary-tree-and-binary-search-tree)]
+	- 2. Right Subtree Condition
+		- All node values in the **right subtree** must be strictly **greater than** the parent node's value. [[1](https://levelup.gitconnected.com/mastering-binary-search-tree-bst-e860c1e3ac39)]
+	- 3. Recursive Validity
+		- Both the left and right subtrees must also be valid Binary Search Trees. [[1](https://algo.monster/liteproblems/1373)]
+	- An Important Traps to Watch Out For
+	- #+BEGIN_IMPORTANT
+	  It is a common mistake to only check if a node is greater than its immediate left child and less than its immediate right child. **That is not enough.** Every single node in the entire left branch must be smaller than the root. [[1](https://neetcode.io/solutions/validate-binary-search-tree), [2](https://algomaster.io/learn/dsa/validate-binary-search-tree), [3](https://www.guvi.in/blog/binary-tree-vs-binary-search-tree/)]
+	  #+END_IMPORTANT
+		- **Example of a FAILED BST:**
+			- text
+			- ```
+			            5
+			           / \
+			          3   7
+			             /
+			            4   <-- Invalid! 4 is less than 5, but it is in the right subtree of 5.
+			  ```
+		- ```python
+		  import unittest
+		  from typing import Optional
+		  # Definition for a binary tree node.
+		  
+		  
+		  class TreeNode:
+		      def __init__(self, val=0, left=None, right=None):
+		          self.val = val
+		          self.left = left
+		          self.right = right
+		  
+		  
+		  class Solution:
+		      def traverse_bst(self, root: Optional[TreeNode], start: int | float, end: int | float) -> bool:
+		          if not root:
+		              return True
+		          # if  root.val < start or root.val > end:
+		              # return False
+		          if not (start < root.val < end):
+		              return False
+		          else:
+		  
+		              left = self.traverse_bst(root.left, start, root.val)
+		  
+		              right = self.traverse_bst(root.right, root.val, end)
+		  
+		              return left and right
+		  
+		      def isValidBST(self, root: Optional[TreeNode]) -> bool:
+		          return self.traverse_bst(root, float('-inf'), float('+inf'))
+		  
+		  
+		  class test_bst(unittest.TestCase):
+		  
+		      def test_input1(self):
+		          root = TreeNode(5)
+		          root.left = TreeNode(1)
+		          root.right = TreeNode(25)
+		          result = Solution().isValidBST(root)
+		          self.assertTrue(result)
+		  
+		      def test_input2(self):
+		          root = TreeNode(2)
+		          root.left = TreeNode(1)
+		          root.right = TreeNode(3)
+		          result = Solution().isValidBST(root)
+		          self.assertTrue(result)
+		  
+		  
+		  
+		  if __name__ == "__main__":
+		      unittest.main()
+		  
+		  ```
+	- **Successor** : Write an algorithm to find the "next" node (i.e in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent #card
+		- How do you define the next node of a node ?
+			- It is the leftmost node of the right subtree of the node. In the case of in-order traversal the depth of the tree is traversed completely
+			- If there is no right subtree then you need to traverse the tree up using the parent node links and then look for the parent in which the child is the left subtree of the parent ? Why is it the left subtree?
+			- ```python
+			  import unittest
+			  from typing import Optional
+			  
+			  
+			  class TreeNode:
+			      def __init__(self, val=0, parent=None, left=None, right=None):
+			          self.val = val
+			          self.parent = parent
+			          self.left = left
+			          self.right = right
+			  
+			  
+			  class Solution:
+			      def successor(self, node: TreeNode) -> Optional[TreeNode]:
+			          if not node:
+			              return None
+			  
+			          # if the right subtree exists then check the leftmost child of the right subtree
+			          if node.right:
+			              curr = node.right
+			              while curr:
+			                  if curr.left:
+			                      curr = curr.left
+			              return curr
+			          elif node.parent:
+			              curr = node
+			              parent = node.parent
+			              while (parent):
+			                  if parent.left == curr:
+			                      return parent
+			                  else:
+			                      curr = parent
+			                      parent = parent.parent
+			  
+			          print("No successor found")
+			          return None
+			  
+			  
+			  class check_successor(unittest.TestCase):
+			  
+			      #       0
+			      #     1    2
+			      #   3    4
+			      #  find next node of 4. Answer : 0
+			      def test_input1(self):
+			          root = TreeNode(0)
+			          one = TreeNode(1, root)
+			          root.left = one
+			          two = TreeNode(2, root)
+			          root.right = two
+			          three = TreeNode(3, one)
+			          one.left = three
+			          four = TreeNode(4, one)
+			          one.right = four
+			  
+			          result = Solution().successor(four)
+			          self.assertEqual(result.val, 0)
+			  
+			      def test_input2(self):
+			          root = TreeNode(0)
+			          one = TreeNode(1, root)
+			          root.left = one
+			          two = TreeNode(2, root)
+			          root.right = two
+			          three = TreeNode(3, one)
+			          one.left = three
+			          four = TreeNode(4, one)
+			          one.right = four
+			  
+			          result = Solution().successor(two)
+			          self.assertIsNone(result)
+			  
+			  
+			  if __name__ == "__main__":
+			      unittest.main()
+			  
+			  ```
+			-
