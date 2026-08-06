@@ -19,8 +19,13 @@
 	- [[python - output function]]
 	- [[python - variables]]
 	- [[python - declaring variable and functions]]
+	- [[python - operators ]]
+	- [[python - operators precedence]]
+	- [[python - operators polymorphism and Exercises]]
 	- [[python - conditionals and looping]]
 	- [[python - standard Library collections]]
+	- [[Parked problems]]
+	-
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]

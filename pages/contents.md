@@ -1,1 +1,5 @@
--
+- How to do a git pull
+	- First go to the folder containing the Interviews logseq folder using your Windows File explorer
+	- type cmd in the windows explorer to open the terminal in that folder
+	- type git pull to get the latest information
+	-

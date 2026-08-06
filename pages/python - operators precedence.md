@@ -1,0 +1,9 @@
+- ![image.png](../assets/image_1785978146843_0.png)
+- ![image.png](../assets/image_1785978188848_0.png)
+- ![image.png](../assets/image_1785978202043_0.png)
+- ![image.png](../assets/image_1785978229305_0.png)
+- ![image.png](../assets/image_1785978352146_0.png)
+-
+- # Exercises
+- Are operators with higher precedence executed first or operators with lower precedence executed first ?
+-

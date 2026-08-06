@@ -1,0 +1,12 @@
+- Single number : https://leetcode.com/problems/single-number/description/
+-
+- [Arithmetic Operators Challenge](https://www.hackerrank.com/challenges/python-arithmetic-operators/problem) – Practice addition, subtraction, and multiplication.
+- [Python: Division Challenge](https://www.hackerrank.com/challenges/python-division/problem) – Master the difference between integer floor division (`//`) and float division (`/`).
+- [Loops Challenge](https://www.hackerrank.com/challenges/python-loops/problem) – Uses arithmetic and comparison operators inside a loop structure. [[1](https://www.linkedin.com/posts/ala-gayathri-b54b48389_hackerrank-python-arithmeticoperators-activity-7484479954240466944-w9X2), [2](https://www.scribd.com/document/876768119/Arithmetic-Operators-45-Questions), [3](https://www.youtube.com/watch?v=1KZqxAJZ5GM), [4](https://www.studysmarter.co.uk/explanations/computer-science/computer-programming/python-arithmetic-operators/)]
+-
+-
+- [Single Number](https://leetcode.com/problems/single-number/) – Uses the bitwise XOR (`^`) operator to find a unique element.
+- [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) – Uses bitwise AND (`&`) and shifting (`>>`) operators.
+- [Add Binary](https://leetcode.com/problems/add-binary/) – Tests your understanding of binary arithmetic and carry logic. [[1](https://purpletutor.com/python-xor/), [2](https://akcoding.medium.com/bitwise-operators-in-c-hackerrank-solution-5e7c9a950811), [3](https://studyglance.in/python/operator.php/1000), [4](https://medium.com/@hanxuyang0826/mastering-bit-manipulation-key-concepts-and-practice-leetcode-problems-c0c328cdf164)]
+- ---
+-
