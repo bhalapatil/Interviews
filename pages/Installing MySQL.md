@@ -1,0 +1,10 @@
+- We will install the community edition which is free for Windows operating system
+- Download the ysql-installer-web-community-*.msi from the page https://dev.mysql.com/downloads/installer/
+- No need to create Oracle web account, just click on this button "No thanks, just start my download"
+- Use custom install and install the below components only
+- ![image.png](../assets/image_1786031490038_0.png)
+- ![image.png](../assets/image_1786031507422_0.png)
+- ![image.png](../assets/image_1786032154526_0.png)
+- root password: dbmslearning@1234
+- Add user - bhala/dbmscourse@1234
+-

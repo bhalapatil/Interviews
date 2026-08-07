@@ -22,9 +22,19 @@
 	- [[python - operators ]]
 	- [[python - operators precedence]]
 	- [[python - operators polymorphism and Exercises]]
+	- [[python - control structures]]
+	- [[python - General introduction to Data structures]]
+	- [[python - Lists and its operations]]
+	-
 	- [[python - conditionals and looping]]
-	- [[python - standard Library collections]]
+	- [[python - Tuples]]
 	- [[Parked problems]]
+	-
+- # Database Design and programming
+	- For learning purpose we will create an App that manages todo list - Similar to the Todoist app that you are using
+	- [[Installing MySQL]]
+	- [[Introduction to Databases]]
+	- [[MySQL - Creating the Database and Tables]]
 	-
 	-
 - ## Leet code
