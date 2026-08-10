@@ -1,0 +1,31 @@
+- What are the principle of Information security? #card
+	- Confidentiality - Maintain confidentiality
+	- Integrity - Ensuring correctness
+	- Authentication - Authenticate who you are
+	- Non-repudiation - No one can deny that the information was sent or received
+- What enables confidentiality? #card
+	- Encryption
+	- Access controls
+	- Secure channels
+	-
+- How is integrity enabled? #card
+	- Hash functions
+	- Check sums
+	- Digital signatures
+	- The help detecting tampering or modifiation
+- How is authentication enabled? #card
+	- Passwords
+	- Biometrics
+	- Digital certificates
+- How is non-repudiation enabled? #card
+	- Digital signatures
+	- Audit logs
+- What are the different security mechanism? #card
+	- Authentication exchange : Mutual identify verification
+	- Access control techniquest : Passwords, firewalls, biometrics
+	- Encryption: Converts plain text to ciphertext so that only the intended reciepient can read the message
+	- Hash function : Detect changes
+	- Notarisation: Trusted third party validation
+	- Digital Signatures: Verifies authenticity and integrity
+	-
+	-

@@ -48,4 +48,10 @@
 - ## Exercise 4:
 	- Now for the items that you want to store, you need to specify the data types. Just like programming languages have datatypes, information in DB has types
 	- Add the types to the information you want to store
+- ## Exercise 5:
+	- Insert some sample records in the table
+- ## Exercise 6:
+	- View the records in the table
+- ## Exercise 7:
+	- Recognizing issue in the table definition and how to fix those
 	-

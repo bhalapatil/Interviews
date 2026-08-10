@@ -35,7 +35,11 @@
 	- [[Installing MySQL]]
 	- [[Introduction to Databases]]
 	- [[MySQL - Creating the Database and Tables]]
-	-
+	- [[MySQL - Connect to Database using Python]]
+- # Cryptography and programming
+	- [[Basics of Information security]]
+	- [[CIA Triad]]
+	- [[Services and mechanismls]]
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]

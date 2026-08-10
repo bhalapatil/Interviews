@@ -1,0 +1,56 @@
+# Key security services
+- Key services : Verifying identity
+- Authorization : Granting access rights
+- Non-repudiation: Ensuring accoutability
+- Confidentiality and integrity: Protecting data
+- Availability: Keeping systems online and accessible
+-
+- # Tools and Techniques
+- Encryption and hashing
+- Digital signatures
+- Firewalls and Intrusion detection systems
+- Access control models - Discretionary access control (DAC), Mandatory access contorl (MAC) an Role-based access control (RBAC). Defines structured approaches for granting permission
+-
+- # Security Policy and security models
+	- Security policy is a formal document outlining rules, practises and procedures for protecting information assets, accessing and use of information assets
+	- Security models are the conceptual frameworks that define how security policies are implemented in systems
+	- ## Types of policies
+		- These promote consistency in behavior
+		- A strong security policy typically includes
+			- Defined scope
+			- Access controls
+			- Acceptable use guidelines
+			- Risk Management practises
+			- Compliance requiremetns
+			- Incident response plans
+			- The policy evolves with the threats and the technologies evolve
+			-
+			-
+- # Security mechanisms
+	- NC ferment
+	- access control
+	- authorization exchange
+	- digital signatures
+	- data integrity checks
+	- traffic padding
+	- map the mechanism for the specific layers
+	- Integrate security into the security services
+	-
+	- Security mechanisms are the technical and procedural tools used to protect systems, data and communications from unauthorized access, manipulation or disruption. Thee include algorithms, protocols , administrative procedures,
+	- Firewalls and network security is used
+	- The main types of security mechnisms are
+		- cryptography  mechanisms : encipherment, encryption and decryption . convers the data into unreadable form
+		- Digital signatures : Ensures sender's identity and message integrity
+		- hash function: generates a fixed set output from a data to detect the tampering.
+		- Authenticaion mechanisms : password , biometric authentication
+		- Access control mechanism : Grant permission based on user roles
+		- Network security mechanisms:
+		- Data integrity mechanisms
+		- Non-repudiation mechanisms: audit logs
+		- routing controls , notarization, bit stuffing
+- # Security models
+	- These are structured frameworkds that define how systems enforce security policies to protect data and operations
+	-
+	-
+	-
+	-
