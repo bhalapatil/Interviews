@@ -90,3 +90,9 @@
 	    print(val)
 	  ```
 -
+- Exercise: How to use the list as a stack? Which methods are use for doing this? #card
+	- The end of the list can be used as the top of the stack
+	- lst.append() method for adding a value to the end of the list. In this case the top of the stack
+	- lst.pop() - without the index will pop at the end of the list. In this case the top of the stack
+	-
+	-

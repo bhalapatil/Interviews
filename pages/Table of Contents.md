@@ -25,6 +25,8 @@
 	- [[python - control structures]]
 	- [[python - General introduction to Data structures]]
 	- [[python - Lists and its operations]]
+	- [[python - Dictionaries]]
+	- [[python - sets and its operations]]
 	-
 	- [[python - conditionals and looping]]
 	- [[python - Tuples]]
@@ -40,6 +42,8 @@
 	- [[Basics of Information security]]
 	- [[CIA Triad]]
 	- [[Services and mechanismls]]
+	- [[Basic terminologies of cryptography]]
+	- [[Substitution techniques]]
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]
