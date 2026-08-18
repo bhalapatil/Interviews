@@ -1,24 +1,32 @@
 - What is a database? #card
+  id:: 6a753848-d92f-4163-874a-5388990f738e
 	- A database is an organized collection of data stored electronically
 - Why do you need a database? #card
+  id:: 6a7538a2-97ee-4c23-b2dc-9c558cd62d51
 	- A database is needed to store information that can retrieved when needed. That is, the information should be persistent. Databases are used to store information in a persistent way so that it can be retrieved any time
 - Can i not store the information in simple files? #card
+  id:: 6a753996-0164-43f7-8108-022e6671d0b6
 	- Yes, information can be stored in simple files. But while retrieving it will take an enormous amounts of time as you need to search in the entire file. Infact, initial databases were some files.
 	- A database as a technology has theortical foundations of how to organize this information so that it can be stored and retrieved efficiently
 - Does then databases not use files on the file system ? #card
+  id:: 6a753a42-0c48-4402-8d70-64bd2e1da69f
 	- No, ultimately all information is stored in the file system as files. The filesystem of the OS stores the information on hard disk. The database imposes how the information is written - the structure of the information, the location of the data in the files, how the files should be organized etc
 - How is information stored in the database? #card
+  id:: 6a753ac9-839b-4253-b3e8-56a176102c81
 	- Information is stored as tables. But in reality there is no table at the lower levels of computer science. The database technology provides the abstraction of the table using data structure and algorithms
 - What then is this Relational database? Are there other types? #card
+  id:: 6a753f25-8796-4939-a54b-2d1d0e9741ae
 	- Relational database is a class of databases that are based on **Set theory** , **Relational Algebra**
 	- In 1985, Edgar F. Codd published **12 Rules** (numbered 0 to 12, making 13 total) to define what constitutes a true Relational Database Management System (RDBMS).
 	- Some examples of RDBMS are MySQL, PostgreSQL , Oracle , SQLServer
 	-
 - Are there then other types of databases and what is their purpose? #card
+  id:: 6a754024-7e97-485e-a609-aeea884cd662
 	- As the Information technology grew, there was a need to represent different types of data that do not lend well as tables efficiently. Example are Graph data such as used by Google maps. As AI/ML grew, its based on Vector algebra. So another class of vector databases were created called Vector databases
 	- Neo4J is a graph database and implements many of the graph algorithms and stores graph data.
 	- Other types are Time Series database that is heavily used in data that is organized as time series of events. Ex: InfluxDB
 - What are distributed databases? #card
+  id:: 6a754189-9ffc-44f3-a41d-9ae2f28cddb8
 	- Image Aadhar that has to store information about Billions of people and help to retrieve it efficiently. Or Amazon that has to store information about millions of products and users.
 	- Such large volume of data cannot be stored on a single server. So a set of servers are used to store information. However, these servers must be coordinated using a layer of software. Such a set is called a **cluster** and the software that is used to coordinate is called the **clustering software**
 	- Such a large amount of data is called **Big Data** and the technologies used for this domain is called **Big Data** technologies. In here everything is at large scale

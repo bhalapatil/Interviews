@@ -1,4 +1,5 @@
 - What is a database? #card
+  id:: 6a7557d1-ec80-4007-896c-943b036ed7e2
 	- A database or some times called a schema is a namespace to hold objects such as Table , stored procedures etc. An object name must be unique within a namespace
 	- Different databases use different terminologies - some call it database and some call it schema
 - # Creating a database
@@ -55,3 +56,4 @@
 - ## Exercise 7:
 	- Recognizing issue in the table definition and how to fix those
 	-
+-

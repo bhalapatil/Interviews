@@ -1,9 +1,12 @@
 # Hash tables
 	- How are hash tables implemented using the hash functions and linked list ? #card
+	  id:: 6a34a915-119d-48fd-a289-b3e32f74ea1e
 		- The hash function is used to calculate an int or long using the key as input from the hash function. Then the hash index is used as an index into an array at which the key and the value is stored
 	- How are collisions handled in the Hash table? #card
+	  id:: 6a34a920-1c54-4ff4-b618-92222e813273
 		- A linked list is maintained at each index and collisions are handled
 	- What the different names used in  Hash tables? #card
+	  id:: 6a34a9d0-490e-419b-a635-a319d33641a7
 		-
 		- A hash table is a data structure used to store key-value pairs for highly efficient retrieval. Depending on the programming language, context, or theoretical computer science perspective, it goes by several other names. [[1](https://datastructures.maximal.io/hash-tables/)]
 		- The most common alternative names include:
@@ -14,6 +17,7 @@
 			- **Symbol Table:** Often used in compiler design and theoretical computer science to refer to a data structure that tracks information like variable names. [[1](https://medium.com/@poojadas053/hash-table-beea12d978b4), [2](https://study.com/academy/lesson/hash-tables-definition-use-functions.html), [3](https://www.cs.cornell.edu/courses/cs3110/2017fa/l/15-hashtable/notes.html), [4](https://ethans.co.in/blogs/hashmap-vs-hash-table-understanding-the-differences/), [5](https://datastructures.maximal.io/hash-tables/)]
 		- Depending on specific implementation variations, you may also encounter terms like **Hash Set** (which stores only keys without accompanying values) or **Distributed Hash Table** (a decentralized variant used in distributed computing networks)
 	- Ch1 : Q1 : Write a implementation of the hash table with arrays and linked list in c ? #card #cprogramming
+	  id:: 6a34aa3d-9bb6-41c4-99e5-b4a5ad827c91
 		-
 - # ArrayList and Resizeable Arrays
 	- In some languages, arrays (often called lists ) are automatically resizeable. The array list or list will grow as you append items. In other languages the arrays are fixed length. the size is defined when you create the array
@@ -21,9 +25,12 @@
 	  This is an important data structure for the interviews
 	  #+END_IMPORTANT
 	- How is any arraylist of the List in python implemented? Can you implement in C to store int values? #card #cprogramming
+	  id:: 6a34abd4-7633-4115-8c08-1fd010554c51
 	- How do you extend the arraylist data structure to store values of any type ? #card #cprogramming
+	  id:: 6a34ac20-add8-44cb-8fa3-e2af8695783b
 		- Hint : using macros
 	- What will be the amortized runtime of the insertion into an list ? #card
+	  id:: 6a34acf3-de45-40f0-b207-9e8d1a1b5359
 		- O(1) . Suppose you have a list of size N, We can work backwards to compute how many elements are copied as the size increases. When we increase the array to K elements, the array was K/2 previously. Therefore we need to copy k/2 elements
 		- ```
 		  final capacity increase : n/2 elements to copy
@@ -36,11 +43,14 @@
 		- The addition of this series is N/2 + N/ 4 + N/8 ...2 + 1. This is approximately N
 - # Exercises
 	- Is Unique : Part 1 :  Implement an algorithm to determine if a string has all unique characters? What will be the Space and time complexity ? #card
+	  id:: 6a34b240-f32a-4615-8a90-6147a7a7c44c
 		-
 	-
 	- Is Unique : Part 2 : What if you cannot use any other additional data structures? What will be the space and time complexity ? #card #cprogramming
+	  id:: 6a34b27e-1559-4541-984a-f4e675614da9
 		-
 	- Check Permutation: Given two strings, write a method to decide if one is a permutation of the other? #card
+	  id:: 6a3ab47b-e7eb-4036-88e5-a9c5c35a3c3c
 		- Hint: How do you decide that on string is a permutation of the other?
 		- Two strings are a permutation of each other if the char counts are the same. To implement this we can use a dictionary and then compare the dictionaries
 		- Important : You should not assume that the permutation is case insensitive. "God" is different from "dog". Also, you can check if the spaces are significant. i.e. if "God" is different from "God     ". If spaces are not significant then you should trim the string
@@ -87,6 +97,7 @@
 		      unittest.main()
 		  ```
 	- URLify: Write a method to replace all the spaces in a string with "%20". #card
+	  id:: 6a3ab47b-e958-4973-9d76-da6cb3ff450e
 		- Hint: Count the number of characters in the string and how much is needed later
 	- Palindrome permutation: Given a string, write a function to check if it is a permutation of a palindrome.
 	  id:: 6a3ab47b-e5a8-46da-8e64-3c5d8924e194
@@ -231,9 +242,11 @@
 		  
 		  ```
 	- String compression: Implement a method to perform basic string compression using counts of repeated chars. For ex: the string aabcccccaaa would be a2b1c5a3. If the compressed string would not  become smaller than the original string, you method should return the orginal string. You can assume the string has only uppercase and lowercase letters (a -z)
+	  id:: 6a475da3-391d-445c-98dc-93fa026439b5
 	  #card
 		- Hint: Underlying concept is the same - character frequency
 	- String Rotation: Assume that you have a method isSubstring that check if one string is a substring of the other. Write a function that takes two string and checks if one is a rotation of the other? #card
+	  id:: 6a47a42e-29b7-4b36-9f4a-ff43fd400f9a
 		- See the hints in the book and solve
 	- Rotate Matrix: Given an image represented by NxN matrix, where each pixel is in the image is 4 bytes. Write a method to rotate the image by 90 degrees. Can you do this in place?
 		- Watch the striver's video : {{video https://www.youtube.com/watch?v=Z0R2u6gd3GU&t=466s}}

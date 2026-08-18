@@ -10,12 +10,16 @@
 		- `isEmpty()`: Return true if and only if the stack is empty
 		-
 	- Implement a stack to store integers using D ? #card
+	  id:: 6a525490-3ffa-42f1-8634-806763d30a32
 		-
 	- How can you create a stack that can store anything? Such as Struct of Student or Struct of BankAccounts etc? #card
+	  id:: 6a5254af-2bbe-4db8-bcea-3fb3158a5951
 		- Use the implementation that uses `ints` and try to make it generic using `C Macros`
 	- What features does compilers of modern programming languages like C++ or Java have for building DS that are generic? #card
+	  id:: 6a525502-8b4e-4c53-9390-87a7c390555d
 		- The features is called by different names in C++ they are called templates and in Java they are called Generics
 	- Provide a Java implementation of a stack that is generic ? #card
+	  id:: 6a52554f-4b63-47f7-87ff-98aef9aec5f6
 		-
 	- ## Some uses of stack
 		- #+BEGIN_IMPORTANT
@@ -34,15 +38,20 @@
 	- A Q can be implemented using the Linked List - just that the elements are added and removed from the same side
 	-
 	- Implement a Q that stores `ints` using Linked List in C? #card
+	  id:: 6a52572a-c3f3-4787-a9b9-f83f2b3e724e
 	- How can you convert the Q that stores only `ints` into a more generic DS ? #card
+	  id:: 6a525738-a481-4d26-9413-2a2fc78f81b8
 	- Provide a Java implementation of a Generic Queue ? #card
+	  id:: 6a525796-ca6c-4ec7-bd4b-47d3cfee9a78
 	- ## Uses of Q
 		- Used in Breadth-First search or implementing a cache
 		- In BFS Q was used to store the list of the nodes that needed to be processed. Each time a node was processed, the adjacent nodes were added to the back of the queue. This allows us to process nodes in the order in which they were viewed
 	-
 - # Questions
 	- *Three in one* : Describe how you could a single array to implement three stack? #card
+	  id:: 6a525833-2a5f-461c-ad7a-ec6e17a7e77f
 	- *Stack Min* : How would you design a stack which, in addition to push an pop, has a function min which returns the minimum element? Push, pop and min should all operate in O(1) time #card
+	  id:: 6a525856-32f9-40b1-bda9-681ac1f013f7
 		- Hints : Build a logical diagram of the stack and observe how the min value changes as the elements are pushed and poped from the stack
 		- ```python
 		  # How would you design a stack which,
@@ -102,6 +111,7 @@
 		  
 		  ```
 	- **Queue via stack** : Implement a MyQueue which implements a queue using stack #card
+	  id:: 6a525471-4acf-46f3-9c4b-44f77a21e2e8
 		- Logically how do you used two stack to implement a queue
 		- ```python
 		  import unittest

@@ -1,6 +1,7 @@
 -
 - ### Two sum
 	- Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`. You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice. You can return the answer in any order. #card #easy
+	  id:: 6a28326d-1b20-4927-84ee-c675794ce5bc
 		- https://leetcode.com/problems/two-sum/description/
 		- Logical thinking: Without implementation
 		  Brute force: Have two loops and iterate over the elements. The 2nd loop should start one element after first and the first loop should end before the last

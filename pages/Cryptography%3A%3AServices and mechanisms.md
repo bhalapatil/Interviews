@@ -1,9 +1,10 @@
 # Key security services
-- Key services : Verifying identity
-- Authorization : Granting access rights
-- Non-repudiation: Ensuring accoutability
-- Confidentiality and integrity: Protecting data
-- Availability: Keeping systems online and accessible
+- What are the key security services needed for security?
+	- Key services : Verifying identity
+	- Authorization : Granting access rights
+	- Non-repudiation: Ensuring accoutability
+	- Confidentiality and integrity: Protecting data
+	- Availability: Keeping systems online and accessible
 -
 - # Tools and Techniques
 - Encryption and hashing

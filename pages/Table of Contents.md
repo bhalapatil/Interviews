@@ -23,27 +23,32 @@
 	- [[python - operators precedence]]
 	- [[python - operators polymorphism and Exercises]]
 	- [[python - control structures]]
-	- [[python - General introduction to Data structures]]
-	- [[python - Lists and its operations]]
-	- [[python - Dictionaries]]
-	- [[python - sets and its operations]]
-	-
+	- [[python::Intro to Data structures]]
+	- [[python::Lists]]
+	- [[python::Dictionaries]]
+	- [[python::sets]]
+	- [[python::strings]]
+	- [[python::Functions]]
 	- [[python - conditionals and looping]]
-	- [[python - Tuples]]
+	- [[python::Tuples]]
 	- [[Parked problems]]
 	-
 - # Database Design and programming
 	- For learning purpose we will create an App that manages todo list - Similar to the Todoist app that you are using
 	- [[Installing MySQL]]
-	- [[Introduction to Databases]]
+	- [[Database::Introduction]]
+	- [[Database::Architecture]]
+	- [[Database::Table Creation]]
+	-
 	- [[MySQL - Creating the Database and Tables]]
 	- [[MySQL - Connect to Database using Python]]
 - # Cryptography and programming
-	- [[Basics of Information security]]
-	- [[CIA Triad]]
-	- [[Services and mechanismls]]
-	- [[Basic terminologies of cryptography]]
-	- [[Substitution techniques]]
+	- [[Cryptography::Basics of Information security]]
+	- [[Cryptography::CIA Triad]]
+	- [[Cryptography::Services and mechanisms]]
+	- [[Cryptography::Basic terminologies of cryptography]]
+	- [[Cryptography::Substitution techniques 1]]
+	- [[Cryptography::substitution techniques - 2]]
 	-
 - ## Leet code
 	- [[Leet Code - Two Sum]]

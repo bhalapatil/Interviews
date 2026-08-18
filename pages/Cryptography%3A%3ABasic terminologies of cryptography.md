@@ -1,0 +1,51 @@
+- What is cryptograph? #card
+	- cryptography: the art of converting data into secret data or secret code To protect it from the unauthorised access. The message becomes unreadable and can deciphered by the intended user.
+	- Needed for using the untrusted network such as the internet
+-
+- # common security requirement
+- What are the common security requirements and how they are achieved? #card
+	- secrecy : Acheived through encryption to guarentee the data is not readable by others
+	- authenticity : acheived through digital signatures and encryption to verify the identify of the sender and the receiver
+	- Integrity : achieved through digital signature and encryption to ensure that the data has not been altered while in intransit
+	- non-repudiation: acheived through digital signature so that the parties cannot deny their actions
+-
+- what can cryptograph do? #card
+	- Encryption: Only the authorized party can understand the encrypted message
+	- Signature: Allow people to verify the authenticity of the message
+	- Helps minimizes the risks while using the insecure  networks
+-
+-
+- # Key Cryptoterms
+- What is plain text? #card
+	- Plain text: Original readable message
+- What is Cipher text? #card
+	- Ciphertext: Scrambled or the coded message
+- What is a Cipher? #card
+	- Cipher: Algorithm for transforming plaintext to ciphertext
+- What is a key? #card
+	- Key: Information/data known only the the sender/receiver that is used in the transformation of the data from plain text to cipher text
+- What is Enchiperment? #card
+	- Encipher (encrypt): Converting plaintext to ciphertext
+- What is decipherment? #card
+	- Decipher (decrypt) : Recovering plaintext from cipher text
+- What is Cryptology? #card
+	- The science of secure communication
+- What is Cryptography? #card
+	- The study of principles and techniques through which information can be hidden in a cipher ( = secret writing)
+- What is Cryptanalysis? #card
+	- The science and art to recreate the information in a cipher without knowing the key (before hand)
+- Who is a Cryptanalyst? #card
+	- Cryptanalyst is a person who attempts to break a cipher text message to obtain the original plain text message
+-
+- # Cryptography mechanisms
+- What is meant by cryptographic mechanisms? #card
+	- Cryptography mechanisms are structured techniques used to protect information by transforming it into formats that unauthorized users cannot understand
+- What are substitution techniques do for enchiperment? #card
+	- **Substitution techniques** :  where characters in the original message are replaced with others to obscure the content - like turnining every a into a d
+- What do transposition techniques do for encipherment? #card
+	- **Transposition techniques** which rearrange the positions of characters without altering them - such as swapping the first with the fourth character
+- What do Combinational techniques do for encipherment? #card
+	- These blend both substitution and transposition and are widely used in the modern encryption systems for strong security
+-
+-
+-

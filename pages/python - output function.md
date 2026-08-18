@@ -20,7 +20,9 @@
   ```
 - # Exercises
 	- print three numbers. What is the separator ? #card
+	  id:: 6a728a8e-7587-40e1-a39c-d49bd3c07cb0
 	- print three numbers. Specify the separator to be : in this case #card
+	  id:: 6a728ad7-0c17-400d-b65c-d796235a7fb0
 	- Why is the below code printing on two separate line? How can you print in the same line with a space between them?
 		- Hint: what should you change for the end parameter
 		- ```python

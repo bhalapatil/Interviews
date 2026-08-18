@@ -6,6 +6,7 @@
 		- In python removing duplicates is simple - converting into a set
 		- Write code for using the class  based approach
 	- Return Kth to Last:  Implement an algorithm to find the kth to the last element of a singly linked list
+	  id:: 6a4c77ef-dedb-4870-b9eb-400cad0c537c
 	  Hint : Can you use the runner method to run through the linked list ?
 	  If you know the size of the list will it be simplified?
 	  #card
@@ -117,9 +118,11 @@
 		      unittest.main()
 		  ```
 	- Delete middle node? Implement an algorithm to delete a node in the middle (i.e  any node but the first and last node; not ncessarily the exact middle) of a singly linked list, given only access to that node
+	  id:: 6a4c8e14-df1b-48c7-8aa6-1cc3e3c70070
 	  #card
 		-
 	- Partition: Write code toe partition a linked list around a value x, such that all the values less than x are to the left of the value. If x is contained within the list , the values of x only need to be after the elements less than x. The partition element x can appear anywhere in the "right partition" . It does not need to appear between the left and right partiion
+	  id:: 6a4c8e6b-93c4-40bc-b2c3-2635ff291b17
 	  Ex:
 	  Input 3 -> 5 -> 8 ->5 ->10 ->2 (partition = 5)
 	  Output 3 ->1 -> 2 -> 10 -> 5 -> 5 ->8

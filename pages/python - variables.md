@@ -4,9 +4,11 @@
 	- ![image.png](../assets/image_1785891773211_0.png)
 	-
 - What is a variable in python? #card
+  id:: 6a728bc3-5ad5-4d64-881f-e843d672215f
 	- A variable is a name (identifier) that is associated with a value and it is always reference type
 	- Variables are assigned values by use of the assignment operator , =
 - When is a variable created in python? Does it need to be declared first? #card
+  id:: 6a728c15-c90b-4873-9583-4aa912138273
 	- A variable is created when a value is assigned to it. Python being a dynamic programming language does not need the variable to declared being assigned a value. The creation of the variable and assigning a value happens at the same time
 	- This applies even for Object Oriented features of python
 - How is the memory allocated to a value managed in python?
@@ -34,6 +36,7 @@
 	  True
 	  ```
 - What are datatypes and why are they important? #card
+  id:: 6a728e0f-682a-4539-a150-fb9922cad46b
 	- Datatype refers to the type of value a variable refers to.
 	- Significance of data type:
 		- Memory associated with it

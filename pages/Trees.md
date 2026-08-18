@@ -54,8 +54,10 @@ Being able to implement trees and graphs from basics is essential
 		  ```
 		-
 - What is the difference between trees and binary tree? #card
+  id:: 6a58ad2d-9164-4a79-94aa-6fc422bec248
 	- A binary tree is a tree In which each node has up to two children. A tree could have More than three children I
 - What is the difference between a binary tree vs binary search tree? #card
+  id:: 6a58ad2d-2ecb-4df6-b2f7-320eed5a5f50
 	- A binary search tree is a binary tree in which each node hits a specific ordering condition. All left descendants are lesser than or equal to n And all right descendants are greater than n. This must be true for each node n
 	- The definition of a binary search tree Can vary slightly with respect to equality. Under some definitions The tree cannot have duplicate values. In others the duplicate values will be on the right or can be on either side. All are valid definitions But you should clarify this with you were interviewers
 	- #+BEGIN_IMPORTANT
@@ -70,10 +72,13 @@ Being able to implement trees and graphs from basics is essential
 	  #+END_NOTE
 - # complete vs imcomplete binary tree
 	- What is a complete binary tree? Draw some examples of a complete and incomplete binary tree #card
+	  id:: 6a58ad2d-9b39-4224-aa7d-ba5ef8a55823
 		- Show complete binary tree is a binary tree in which every level of the tree is filled, except for perhaps the last level. To the extent that the last level is filled It is filled from left to right
 	- What is a Full binary tree? #card
+	  id:: 6a58ad2d-7474-481a-be1a-fa5a534c68f3
 		- A full binary Is a binary tree in which every known has either zero or two children. .i.e that is no nodes have only one child
 	- What is a perfect binary tree? #card
+	  id:: 6a58ad2d-4652-4c0c-9de3-5babf0fe7d30
 		- a perfect binary iii is one that is both full and complete. All leaf notes will be at the same level and this level has the maximum number of nodes.
 		-
 - # Binary tree traversal
@@ -82,6 +87,7 @@ Being able to implement trees and graphs from basics is essential
 	- Post-Order : visit - left branch , right branch and then current node
 	-
 	- Create a Binary tree as below #card
+	  id:: 6a58ad2d-d9d7-4196-9301-364e8b36af1f
 		- {{renderer :drawio, 1783990867348.svg}}
 		- ```python
 		  from __future__ import annotations
@@ -128,6 +134,7 @@ Being able to implement trees and graphs from basics is essential
 		  
 		  ```
 		- Write a function for performing the InOrder Traversal of a binary tree? #card
+		  id:: 6a58ad2d-4e3f-4bad-bb87-2419d6426790
 			- ```python
 			  from __future__ import annotations
 			  import unittest
@@ -183,18 +190,24 @@ Being able to implement trees and graphs from basics is essential
 			          self.assertEqual(result, "9:5:18:10:3:20:7:")
 			  ```
 		- Write a function to perform the preorder traversal of binary tree? #card
+		  id:: 6a58ad2d-0f6f-43d7-96fd-bd46ebb1ddf3
 			-
 		- Write a function to perform the post-order traversal of a binary tree #card
+		  id:: 6a58ad2d-f937-4be2-a231-1b1cb9e8995d
 - # Binary Heaps (Min-heaps and Max- Heaps)
 	- What is a min-heap (min-binary heap)? #card
+	  id:: 6a58ad2d-0175-4da1-8a04-1e5516d20b0c
 		- A min-heap is a complete binary tree(that is, totally filled other than the rightmost elements on the last level), where each node is smaller than its children. The root, therefore, is the minimum element in the tree
 		- There are two key operations on a min-heap: insert and extract_min
 	- What a max-heap (max-binary-heap) ? #card
+	  id:: 6a58ad2d-0d46-495c-b554-db5ff2b35475
 		- A max-heap is a complete binary tree(that is, totally filled other than the rightmost elements on the last level), where each node is greater than its children. The root, therefore, is the maximum element in the tree
 	- What is the algorithm for inserting into a min-heap? #card
+	  id:: 6a58ad2d-229c-4d30-b044-1326d90bca87
 		- The new element is always inserted at the bottom. The insert is done at the rightmost spot so as to maintain the complete tree property. Then the tree is fixed by swapping the new element with its parent, until an appropriate sport is found. Essentially the element is bubbled up the minimum element
 		- This takes O(log n) times
 	- How is the minimum element extracted and then the property of the tree is maintained? #card
+	  id:: 6a58ad2d-83a8-44e8-bf7c-28834b7a388f
 		- The minimum element is always at the top in a min-heap. First, we remove the minimum element and sway it with the last element in the heap (i.e the bottom-most and the right-most). This is done to maintain the property of the tree (my guess). Then the element is bubbled down so that the min-heap property is restored.
 		- While swapping the element with the child, either the right or the left element can be chosen depending on the values. There is no inherent ordering between the left and the right element, but you will have to pick the smaller one in order to maintain the min-heap orderning
 		- This algorithm takes O(log n) time
@@ -207,12 +220,14 @@ Being able to implement trees and graphs from basics is essential
 		- A node in a trie could have anywhere from 1 through ALPHABET_SIZE+1 children ( or 0 through ALPHABET_SIZE if boolean flag is used for termination).
 	-
 		- What is the runtime of the Trie for searching a word compared to hash? #card
+		  id:: 6a58ad2d-0f4f-4d40-b792-d48d013deb2c
 			- Both actually take O(K) where K is the length of the string. Incase of Hashes, the string must be read fully to convert into a hash value.
 		- #+BEGIN_IMPORTANT
 		  Many problems involving list of valid words leverage a trie as an optimization. In situations where we search through the tree on related prefixes repeately (e.g looking up M, then MA, htne MAN, then MANY) we migh pass around a reference to the current node in the tree. This will allow us to just check if Y is a child of MAN, rather than starting from root each time
 		  #+END_IMPORTANT
 - # Exercises
 	- **MInimal Tree** : Given a sorted (increasing order) array with unique integer elements, write an algo to create a binary search tree with minimal height #card
+	  id:: 6a58ad2d-168c-43ed-8fd7-81c234e94a03
 		- hints
 		- A minimal binary tree will have about the same number of nodes on the left and right od each node. Let's focus on the root and how would you ensure that the same number of nodes are on the left and right of the root
 		- Can this problem be solved by recursion? Try to break this problem into subproblems
@@ -371,6 +386,7 @@ Being able to implement trees and graphs from basics is essential
 		  
 		  ```
 - **Check Balanced** Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one #card
+  id:: 6a590f62-f25c-42d0-a0d6-715bd9b7c38a
 	- Leetcode question 110: https://leetcode.com/problems/balanced-binary-tree/description/
 	- ```python
 	  import unittest
@@ -462,6 +478,7 @@ Being able to implement trees and graphs from basics is essential
 	  
 	  ```
 - **Validate BST** : Implement a function to check if  a binary tree is binary search tree? #card
+  id:: 6a5996cf-17b6-4524-826f-522eb983031c
 	- What conditions need to satisfied to say a tree is balanced?
 	- leetcode 98: https://leetcode.com/problems/validate-binary-search-tree/description/
 	-
@@ -540,6 +557,7 @@ Being able to implement trees and graphs from basics is essential
 		  
 		  ```
 	- **Successor** : Write an algorithm to find the "next" node (i.e in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent #card
+	  id:: 6a599714-02ea-4943-9df1-ecbfacdb5c67
 		- How do you define the next node of a node ?
 			- It is the leftmost node of the right subtree of the node. In the case of in-order traversal the depth of the tree is traversed completely
 			- If there is no right subtree then you need to traverse the tree up using the parent node links and then look for the parent in which the child is the left subtree of the parent ? Why is it the left subtree?

@@ -12,6 +12,7 @@
 		- Represent the graph below as an adjacency list:
 		- {{renderer :drawio, 1784476012979.svg}}
 		- Represent the above graph in python? #card
+		  id:: 6a5cf173-7bd6-4843-a089-c6bcb0491b21
 			- ```python
 			  from __future__ import annotations
 			  import unittest
@@ -55,6 +56,7 @@
   You do not necessarily need classes to represent graphs. They can also be represented using simple builtin data structures such as an Array or a hash table etc
   #+END_IMPORTANT
 	- Represent the above graph using simple data structures. #card
+	  id:: 6a5d0496-9cfd-487b-a5c2-2ee46eb563f3
 		- A simple dictionary can be used to represent a graph. The key of the graphs are individual nodes. The value is a list of nodes with each entry in the list represent an edge
 		- For example the same graph can be represented as
 			- ```
