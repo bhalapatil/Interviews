@@ -1,5 +1,6 @@
 - What does CIA Triad mean? #card
   title:: Cryptography::CIA Triad
+  id:: 6a7da7a6-149d-461e-9a53-fab2acad4833
 	- confidentialy : protect sensitive information from unauthorized acess.Tools: Encryption and access control
 	- integrity: Ensure data is accurate and unaltered. Methods used are checksum, hashing and version control
 	- availability: Sustem and data are up and accessible when required. Backups , redundancy and smart uptime
@@ -12,6 +13,7 @@
 	- Risk Management: Risk must be implemented periodically.  Expired certificates , outdated algorithms like MD5 etc can be harnessed by the attackers. Staying update to the cryptographic standards.
 	- Incident response: Steps taken after a security breach or threat. Involves detection, containment , recovery and reporting
 - What is the difference between Authentication and Authorization? #card
+  id:: 6a7da7a6-c671-4826-8b37-214651dce24f
 	- Authentication is about verify that the individual is who is claims to be.  Techniques are password , Multi Factor authentication etc.
 	- Authorization is the next step where there are mechanism to only allow access to the data that the user should be able to access. Ex: In a database containing college details each student should be able to access data pertaining to him/her and not other students' data
 	- Role based access controls are used to make the authorization

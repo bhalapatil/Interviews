@@ -27,6 +27,8 @@
 	  print(type(fun1))
 	  ```
 	- Note the output of the print statement. It is an object of <class 'function'>
+- What is  function pointer? #card
+	- When a function is created using the def, a variable with the function name is created. This variables is a reference to a function object. This is also called a function pointer. It can used and a passed like other variables. Callbacks generally are done using the function pointers. Many higher order functions such as map take function pointers as input
 - What is the objective of using the global keyword while assigning values to variables in functions? #card
   id:: 6a83a20f-7616-4307-8b1e-5399c0ce32c1
 	- Typically the variables declared are local to the function scope. However the function has access to the variables that are define in the enclosing scope.
@@ -162,9 +164,11 @@
 		- Yes, they can capture the enclosing scopes
 - # nonlocal
 	- What is the nonlocal statement? When is it used? #card
+	  id:: 6a8443c8-fc25-4396-aaf7-4c2dff14ea54
 		- It is similar to the global statement. It is used to modify the variables declared in the enclosing scope and not in the global scope
 		- In other words, nonlocal both allows assignment to names in enclosing function scopes and limits scope lookups for such names to enclosing defs
 	- Give an example of using the nonlocal statement? #card
+	  id:: 6a84446b-1839-4635-a978-8b14f5da3c76
 		- ```python
 		  def tester(start):
 		    state = start

@@ -4,6 +4,7 @@
 	- Replace one or more characters with other characters
 - # Types of substitution method
 	- List some of the substitution methods available? #card
+	  id:: 6a84860d-a348-4095-af2f-b6fd439f0a01
 		- Caesar cipher
 		- Monoaphabetic cipher
 		- Playfair cipher
@@ -13,6 +14,7 @@
 		- Homophonic cipher
 		- Polygram cipher
 - What are the strengths and weakness of the substitution cipher method? #card
+  id:: 6a848634-d354-457d-8810-151567d90d72
 	- Strenghts:
 		- Simple to implement
 		- Good for educational purposes and historical understanding
@@ -24,15 +26,18 @@
 		-
 - # Caesar cipher
 	- What is Caesar Cipher? How does it work? #card
+	  id:: 6a84868a-1470-4fe4-beca-a54be7fa3b92
 		- Earliest known substitution cipher
 		- Used by Julius caesar for use in military communication
 		- Shifts each latter by a fixed number of positions
 		- ![image.png](../assets/image_1786496914694_0.png)
 	- What is the critical weakness of the Caesar Cipher method? #card
+	  id:: 6a8486ad-5ffe-4d14-856b-e8ece5d9ec23
 		- Since there are only 25 possibilities breaking the key with brute force attack is trivial. Also the frequency analysis of the encrypted text can easily lead to the key
 		- Not used in modern cryptograph today. Its very basic and used in puzzles and educational tools
 - # Monoalphabetic cipher
 	- What is monoalphateic cipher? How does it work? #card
+	  id:: 6a848772-a9a5-4a76-8a1e-4cff0b428d1f
 		- The substitution alphabet is shuffled.
 		- An entirely random set it choosen and the alphabets are shuffled.
 		- ![image.png](../assets/image_1786499885953_0.png)
@@ -48,6 +53,7 @@
 			- **"ph"** in _phone_
 		- In these cases, you do not pronounce the two letters separately; they fuse together to create a brand-new phonetic sound
 	- What is playfair cipher? What are the steps for encipherment? #card
+	  id:: 6a8487b4-7bd0-4e9b-8503-92c794475272
 		- Steps for playfair text
 			- Prepare a matrix 5x5 with I/J combined into one. This is possible since english has only 26 alphabets. Not sure on how other languages are encoded. This is derived from a keyword.
 			- It begins with the creation of a 5×5 grid populated by a keyword, omitting duplicate letters and typically merging ‘I’ and ‘J’ into a single cell. The remaining letters of the alphabet are then filled in, ensuring each appears only once.

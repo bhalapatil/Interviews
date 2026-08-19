@@ -29,6 +29,7 @@
 	- [[python::sets]]
 	- [[python::strings]]
 	- [[python::Functions]]
+	- [[python::Function Parameters]]
 	- [[python - conditionals and looping]]
 	- [[python::Tuples]]
 	- [[Parked problems]]
