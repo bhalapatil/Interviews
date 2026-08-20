@@ -34,6 +34,10 @@
 		  id:: 6a82e5db-c41a-459c-beba-928e797b4e47
 			- using constructor tuple() or just `()`
 			- t = ( 1,2) or t=(1,) for a single element. Having a comma is important
+		- What exactly defines a tuple in python? #card
+			- Although the tuple is defined as `(1,2)` it not the parenthesis that makes it a tuple. It is the comma. So just having `1,2` still makes it a tuple
+			- if you define `t = (1)` as a single element tuple; it will not work. It will return an integer in this case. `1,` will make a single element tuple
+			- However, for an empty tuple `()` can be used. Better is to use the tuple() constructor
 	- ## Indexing
 		- Can tuples in python be indexed? How to index tuples in python? #card
 		  id:: 6a82e6bb-8d30-4ff9-ac27-a8e90749f3a0

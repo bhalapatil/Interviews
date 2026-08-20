@@ -32,6 +32,7 @@
 	- [[python::Function Parameters]]
 	- [[python - conditionals and looping]]
 	- [[python::Tuples]]
+	- [[python::unpacking iterables]]
 	- [[Parked problems]]
 	-
 - # Database Design and programming

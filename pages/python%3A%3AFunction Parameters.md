@@ -48,4 +48,6 @@
 	  or 
 	  my_func(125,c ="PES") # a combination or position ond keyword arguments
 	  ```
+	- Once you use a named argument, all arguments thereafter must be named too
+	- You can start with positional arguments and then specify the named arguments
 	-
