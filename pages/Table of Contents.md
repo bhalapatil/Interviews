@@ -33,6 +33,8 @@
 	- [[python - conditionals and looping]]
 	- [[python::Tuples]]
 	- [[python::unpacking iterables]]
+	- [[python::OOPS Basics]]
+	-
 	- [[Parked problems]]
 	-
 - # Database Design and programming

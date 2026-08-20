@@ -28,6 +28,7 @@
 	  ```
 	- Note the output of the print statement. It is an object of <class 'function'>
 - What is  function pointer? #card
+  id:: 6a858aae-2f5b-4498-b8a8-abf4e55e3fb0
 	- When a function is created using the def, a variable with the function name is created. This variables is a reference to a function object. This is also called a function pointer. It can used and a passed like other variables. Callbacks generally are done using the function pointers. Many higher order functions such as map take function pointers as input
 - What is the objective of using the global keyword while assigning values to variables in functions? #card
   id:: 6a83a20f-7616-4307-8b1e-5399c0ce32c1
