@@ -34,6 +34,9 @@
 	- [[python::Tuples]]
 	- [[python::unpacking iterables]]
 	- [[python::OOPS Basics]]
+	- [[python::OOPS Inheritance]]
+	- [[python::OOPS Polymorphism]]
+	- [[python::Exception handling]]
 	-
 	- [[Parked problems]]
 	-
@@ -53,7 +56,7 @@
 	- [[Cryptography::Basic terminologies of cryptography]]
 	- [[Cryptography::Substitution techniques 1]]
 	- [[Cryptography::substitution techniques - 2]]
-	-
+	- [[Cryptography::Programming Basics]]
 - ## Leet code
 	- [[Leet Code - Two Sum]]
 	- [[Leet Code - Add Two numbers]]
